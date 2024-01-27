@@ -9,7 +9,7 @@ const SuitabilityChip: React.FC<ISuitabilityChipProps> = ({ name, level }) => {
   return (
     <div>
       <img
-        src={`/images/suitabilities/${name.replace(" ", "_")}.png`}
+        src={`/palfinder/images/suitabilities/${name.replace(" ", "_")}.png`}
         width="30px"
         height="30px"
         title={name}

@@ -21,7 +21,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
         {types.map((t) => {
           return (
             <img
-              src={`/images/types/${t}.png`}
+              src={`/palfinder/images/types/${t}.png`}
               width="20px"
               height="20px"
               key={t + key}
@@ -32,7 +32,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       </div>
       <div className="imageWiki">
         <img
-          src={`/images/pals/${name.toLowerCase()}.png`}
+          src={`/palfinder/images/pals/${name.toLowerCase()}.png`}
           width="100px"
           height="100px"
         />
@@ -49,7 +49,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       <div className="drops">
         {drops.map((d) => (
           <img
-            src={`/images/items/${
+            src={`/palfinder/images/items/${
               d.includes("cloth")
                 ? "cloth"
                 : d.replaceAll(" ", "_").toLowerCase()

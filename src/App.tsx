@@ -31,7 +31,10 @@ const App = () => {
           <label htmlFor={s} key={`suitabilityFilter${s}`}>
             <span>
               <img
-                src={`/images/suitabilities/${s.replace(" ", "_")}.png`}
+                src={`/palfinder/images/suitabilities/${s.replace(
+                  " ",
+                  "_"
+                )}.png`}
                 width="30px"
                 height="30px"
                 title={s}
