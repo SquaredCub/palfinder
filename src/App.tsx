@@ -8,7 +8,6 @@ const suitabilites: SuitabilitiesEnum[] = enum2array(SuitabilitiesEnum, true);
 
 const App = () => {
   const { handleSliderChange, suitabilityFilters } = useSuitabilityFilters();
-  // const { handle };
 
   const pals = allPals.filter((p) => {
     // Retirer les pals qui n'ont pas les propriété suitability equal or above values[s]

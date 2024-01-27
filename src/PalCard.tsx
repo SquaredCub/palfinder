@@ -48,7 +48,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       </div>
       <div className="drops">
         {drops.map((d) => (
-          <div>
+          <div key={d + key}>
             <span>{d}</span>
             <img
               src={`/palfinder/images/items/${
@@ -58,7 +58,6 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
               }.png`}
               width="30px"
               height="30px"
-              key={d + key}
               title={d}
             />
           </div>

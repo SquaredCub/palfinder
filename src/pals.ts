@@ -1415,7 +1415,7 @@ export const pals: IPal[] = [
         level: 2,
       },
     ],
-    drops: ["Honey", "Elizabee's Staff"],
+    drops: ["Honey", "Elizabees staff"],
     aura: {
       name: "Queen Bee Command",
       description:
