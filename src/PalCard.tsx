@@ -14,8 +14,8 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
   const { key, name, types, suitability, drops, aura, description } = pal;
   return (
     <div className="palcard">
-      <div className="key">{key}</div>
       <div className="name">{name}</div>
+      <div className="key">{key}</div>
       <div className="description">{description}</div>
       <div className="types">
         {types.map((t) => {
@@ -48,17 +48,20 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       </div>
       <div className="drops">
         {drops.map((d) => (
-          <img
-            src={`/palfinder/images/items/${
-              d.includes("cloth")
-                ? "cloth"
-                : d.replaceAll(" ", "_").toLowerCase()
-            }.png`}
-            width="30px"
-            height="30px"
-            key={d + key}
-            title={d}
-          />
+          <div>
+            <span>{d}</span>
+            <img
+              src={`/palfinder/images/items/${
+                d.includes("cloth")
+                  ? "cloth"
+                  : d.replaceAll(" ", "_").toLowerCase()
+              }.png`}
+              width="30px"
+              height="30px"
+              key={d + key}
+              title={d}
+            />
+          </div>
         ))}
       </div>
       <div className="aura">
