@@ -76,6 +76,7 @@ const App = () => {
                     console.log({ e });
                     handleSliderChange({ ...e, name: s });
                   }}
+                  canMinMaxValueSame
                 />
               </label>
             ))}
