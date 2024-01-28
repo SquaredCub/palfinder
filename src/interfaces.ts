@@ -1,3 +1,5 @@
+import { ChangeResult } from "multi-range-slider-react";
+
 export interface IPal {
   id: number;
   key: string;
@@ -68,3 +70,7 @@ export const SUITABILITIES: SuitabilitiesEnum[] = enum2array(
   SuitabilitiesEnum,
   true
 );
+
+export type MultiRangeChangeResult = ChangeResult & {
+  name: SuitabilitiesEnum;
+};

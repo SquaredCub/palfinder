@@ -1,3 +1,5 @@
+import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
+
 import PalCard from "./PalCard";
 import { pals as allPals } from "./pals";
 import "./style.scss";
@@ -12,12 +14,8 @@ import MenuButton from "./MenuButton";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const {
-    handleMinSliderChange,
-    handleMaxSliderChange,
-    resetFilters,
-    suitabilityFilters,
-  } = useSuitabilityFilters();
+  const { handleSliderChange, resetFilters, suitabilityFilters } =
+    useSuitabilityFilters();
 
   const pals = allPals.filter((p) => {
     // Retirer les pals qui n'ont pas les propriété suitability equal or above values[s]
@@ -52,7 +50,7 @@ const App = () => {
             <button onClick={resetFilters}>Reset</button>
           </div>
           <div className="group">
-            <h3 className="group-title">Minimum Level</h3>
+            <h3 className="group-title">Working capabilities</h3>
             {SUITABILITIES.map((s) => (
               <label htmlFor={s} key={`minSuitabilityFilter${s}`}>
                 <span>
@@ -66,46 +64,19 @@ const App = () => {
                     title={`min ${s}`}
                   />
                 </span>
-                <input
-                  type="range"
-                  min="0"
-                  max="4"
-                  value={suitabilityFilters[s].min}
+                <MultiRangeSlider
+                  min={0}
+                  max={4}
+                  step={1}
+                  minValue={suitabilityFilters[s].min}
+                  maxValue={suitabilityFilters[s].max}
                   className="slider"
-                  id={`min |${s}`}
-                  name={`min ${s}`}
-                  onChange={handleMinSliderChange}
+                  id={s}
+                  onChange={(e: ChangeResult) => {
+                    console.log({ e });
+                    handleSliderChange({ ...e, name: s });
+                  }}
                 />
-                <span>{suitabilityFilters[s].min}</span>
-              </label>
-            ))}
-          </div>
-          <div className="group">
-            <h3 className="group-title">Maximum Level</h3>
-            {SUITABILITIES.map((s) => (
-              <label htmlFor={s} key={`maxSuitabilityFilter${s}`}>
-                <span>
-                  <LazyLoadImage
-                    src={`/palfinder/images/suitabilities/${s.replace(
-                      " ",
-                      "_"
-                    )}.png`}
-                    width="30px"
-                    height="30px"
-                    title={`max ${s}`}
-                  />
-                </span>
-                <input
-                  type="range"
-                  min="0"
-                  max="4"
-                  value={suitabilityFilters[s].max}
-                  className="slider"
-                  id={`max |${s}`}
-                  name={`max ${s}`}
-                  onChange={handleMaxSliderChange}
-                />
-                <span>{suitabilityFilters[s].max}</span>
               </label>
             ))}
           </div>

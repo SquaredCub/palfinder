@@ -56,7 +56,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
                   : d.replaceAll(" ", "_").toLowerCase()
               }.png`}
               width="30px"
-              height="30px"
+              // height="30px"
               title={d}
             />
           </div>
