@@ -1,6 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { ChangeEvent, useCallback, useState } from "react";
-import { SUITABILITIES, SuitabilitiesEnum } from "./interfaces";
+import { useCallback, useState } from "react";
+import {
+  MultiRangeChangeResult,
+  SUITABILITIES,
+  SuitabilitiesEnum,
+} from "./interfaces";
 
 export type ISuitabilityFilter = {
   min: number;
@@ -14,8 +18,7 @@ export const isSuitabilityFilterDefault = (filter: ISuitabilityFilter) =>
   filter.max === defaultFilter.max && filter.min === defaultFilter.min;
 
 export const useSuitabilityFilters: () => {
-  handleMinSliderChange: (e: ChangeEvent) => void;
-  handleMaxSliderChange: (e: ChangeEvent) => void;
+  handleSliderChange: (e: MultiRangeChangeResult) => void;
   resetFilters: () => void;
   suitabilityFilters: { [key in SuitabilitiesEnum]: ISuitabilityFilter };
 } = () => {
@@ -59,49 +62,14 @@ export const useSuitabilityFilters: () => {
     [SuitabilitiesEnum.FARMING, { value: farming, setter: setFarming }],
   ]);
 
-  const handleMinSliderChange = useCallback(
-    (e: ChangeEvent) => {
-      const newValue = Number((e.target as HTMLInputElement).value);
-      const {
-        value: { max },
-        setter,
-      } = settersMap.get(e.target.id.split("|")[1] as SuitabilitiesEnum)!;
-      if (newValue > max) return;
+  const handleSliderChange = useCallback(
+    (e: MultiRangeChangeResult) => {
+      const { setter } = settersMap.get(e.name)!;
       setter &&
-        setter((existingValue) => ({
-          min: newValue,
-          max: existingValue.max,
-        }));
-    },
-    [
-      kindling,
-      watering,
-      planting,
-      generatingElectricity,
-      medicineProduction,
-      handiwork,
-      gathering,
-      lumbering,
-      mining,
-      cooling,
-      transporting,
-      farming,
-    ]
-  );
-
-  const handleMaxSliderChange = useCallback(
-    (e: ChangeEvent) => {
-      const newValue = Number((e.target as HTMLInputElement).value);
-      const {
-        value: { min },
-        setter,
-      } = settersMap.get(e.target.id.split("|")[1] as SuitabilitiesEnum)!;
-      if (newValue < min) return;
-      setter &&
-        setter((existingValue) => ({
-          min: existingValue.min,
-          max: newValue,
-        }));
+        setter({
+          min: e.minValue,
+          max: e.maxValue,
+        });
     },
     [
       kindling,
@@ -127,8 +95,7 @@ export const useSuitabilityFilters: () => {
   };
 
   return {
-    handleMinSliderChange,
-    handleMaxSliderChange,
+    handleSliderChange,
     resetFilters,
     suitabilityFilters: {
       kindling,
