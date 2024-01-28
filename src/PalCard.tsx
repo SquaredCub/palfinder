@@ -3,6 +3,7 @@ import React from "react";
 import SuitabilityChip from "./SuitabilityChip";
 
 import { enum2array, SuitabilitiesEnum, type IPal } from "./interfaces";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface IPalCardProps {
   pal: IPal;
@@ -20,7 +21,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       <div className="types">
         {types.map((t) => {
           return (
-            <img
+            <LazyLoadImage
               src={`/palfinder/images/types/${t}.png`}
               width="20px"
               height="20px"
@@ -31,7 +32,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
         })}
       </div>
       <div className="imageWiki">
-        <img
+        <LazyLoadImage
           src={`/palfinder/images/pals/${name.toLowerCase()}.png`}
           width="100px"
           height="100px"
@@ -50,7 +51,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
         {drops.map((d) => (
           <div key={d + key}>
             <span>{d}</span>
-            <img
+            <LazyLoadImage
               src={`/palfinder/images/items/${
                 d.includes("cloth")
                   ? "cloth"

@@ -3,6 +3,7 @@ import { pals as allPals } from "./pals";
 import "./style.scss";
 import { useSuitabilityFilters } from "./useSuitabilityFilters";
 import { SuitabilitiesEnum, type IPal, enum2array } from "./interfaces";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const suitabilites: SuitabilitiesEnum[] = enum2array(SuitabilitiesEnum, true);
 
@@ -29,7 +30,7 @@ const App = () => {
         {suitabilites.map((s) => (
           <label htmlFor={s} key={`suitabilityFilter${s}`}>
             <span>
-              <img
+              <LazyLoadImage
                 src={`/palfinder/images/suitabilities/${s.replace(
                   " ",
                   "_"
