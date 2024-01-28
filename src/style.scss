@@ -210,11 +210,11 @@ img {
 
 //. Ruler
 .multi-range-slider {
-  border: none;
-  box-shadow: none;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 1rem !important;
   flex-grow: 1;
   min-width: 100px;
-  padding: 1rem;
   .ruler {
     &-rule {
       padding: 2px 0px !important;
