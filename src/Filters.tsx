@@ -1,4 +1,4 @@
-import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
+import { ChangeResult } from "multi-range-slider-react";
 import MenuButton from "./MenuButton";
 import {
   MultiRangeChangeResult,
@@ -7,6 +7,7 @@ import {
 } from "./interfaces";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ISuitabilityFilter } from "./useSuitabilityFilters";
+import SuitabilitySlider from "./SuitabilitySlider";
 
 interface IFiltersProps {
   toggleMenu: () => void;
@@ -43,18 +44,13 @@ const Filters: React.FC<IFiltersProps> = ({
                 title={`min ${s}`}
               />
             </span>
-            <MultiRangeSlider
-              min={0}
-              max={4}
-              step={1}
+            <SuitabilitySlider
               minValue={suitabilityFilters[s].min}
               maxValue={suitabilityFilters[s].max}
-              className="slider"
-              id={s}
-              onChange={(e: ChangeResult) => {
+              name={s}
+              changeHandler={(e: ChangeResult) => {
                 handleSliderChange({ ...e, name: s });
               }}
-              canMinMaxValueSame
             />
           </label>
         ))}
