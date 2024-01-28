@@ -9,11 +9,17 @@ main {
   display: flex;
   .filters {
     padding: 1rem;
+    border: 1px solid red;
     align-self: flex-start;
     position: sticky;
     top: 0;
     display: flex;
     flex-direction: column;
+    .group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     label {
       display: flex;
       flex-wrap: nowrap;
@@ -21,12 +27,16 @@ main {
         display: flex;
         align-items: center;
       }
+      input {
+        margin-right: 0.3rem;
+      }
     }
   }
   .pals {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
   }
   @media screen and (max-width: 700px) {
     flex-wrap: wrap;
