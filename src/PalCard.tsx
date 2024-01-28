@@ -2,14 +2,12 @@ import React from "react";
 
 import SuitabilityChip from "./SuitabilityChip";
 
-import { enum2array, SuitabilitiesEnum, type IPal } from "./interfaces";
+import { type IPal, SUITABILITIES } from "./interfaces";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface IPalCardProps {
   pal: IPal;
 }
-
-const suitabilites: SuitabilitiesEnum[] = enum2array(SuitabilitiesEnum, true);
 
 const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
   const { key, name, types, suitability, drops, aura, description } = pal;
@@ -39,7 +37,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
         />
       </div>
       <div className="suitability">
-        {suitabilites.map((sName) => (
+        {SUITABILITIES.map((sName) => (
           <SuitabilityChip
             name={sName}
             level={suitability.find((ps) => ps.type === sName)?.level || 0}

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { ChangeEvent, useCallback, useState } from "react";
-import { SuitabilitiesEnum } from "./interfaces";
+import { SUITABILITIES, SuitabilitiesEnum } from "./interfaces";
 
 export type ISuitabilityFilter = {
   min: number;
@@ -16,6 +16,7 @@ export const isSuitabilityFilterDefault = (filter: ISuitabilityFilter) =>
 export const useSuitabilityFilters: () => {
   handleMinSliderChange: (e: ChangeEvent) => void;
   handleMaxSliderChange: (e: ChangeEvent) => void;
+  resetFilters: () => void;
   suitabilityFilters: { [key in SuitabilitiesEnum]: ISuitabilityFilter };
 } = () => {
   const [kindling, setKindling] = useState<ISuitabilityFilter>(defaultFilter);
@@ -35,42 +36,100 @@ export const useSuitabilityFilters: () => {
   const [farming, setFarming] = useState<ISuitabilityFilter>(defaultFilter);
 
   const settersMap = new Map([
-    ["kindling", setKindling],
-    ["watering", setWatering],
-    ["planting", setPlanting],
-    ["medicineProduction", setMedicineProduction],
-    ["generatingElectricity", setGeneratingElectricity],
-    ["handiwork", setHandiwork],
-    ["gathering", setGathering],
-    ["lumbering", setLumbering],
-    ["mining", setMining],
-    ["cooling", setCooling],
-    ["transporting", setTransporting],
-    ["farming", setFarming],
+    [SuitabilitiesEnum.KINDLING, { value: kindling, setter: setKindling }],
+    [SuitabilitiesEnum.WATERING, { value: watering, setter: setWatering }],
+    [SuitabilitiesEnum.PLANTING, { value: planting, setter: setPlanting }],
+    [
+      SuitabilitiesEnum.MEDICINE,
+      { value: medicineProduction, setter: setMedicineProduction },
+    ],
+    [
+      SuitabilitiesEnum.ELECTRICITY,
+      { value: generatingElectricity, setter: setGeneratingElectricity },
+    ],
+    [SuitabilitiesEnum.HANDIWORK, { value: handiwork, setter: setHandiwork }],
+    [SuitabilitiesEnum.GATHERING, { value: gathering, setter: setGathering }],
+    [SuitabilitiesEnum.LUMBERING, { value: lumbering, setter: setLumbering }],
+    [SuitabilitiesEnum.MINING, { value: mining, setter: setMining }],
+    [SuitabilitiesEnum.COOLING, { value: cooling, setter: setCooling }],
+    [
+      SuitabilitiesEnum.TRANSPORTING,
+      { value: transporting, setter: setTransporting },
+    ],
+    [SuitabilitiesEnum.FARMING, { value: farming, setter: setFarming }],
   ]);
 
-  const handleMinSliderChange = useCallback((e: ChangeEvent) => {
-    const newValue = Number((e.target as HTMLInputElement).value);
-    const setter = settersMap.get(e.target.id.split("|")[1]);
-    setter &&
-      setter((existingValue) => ({
-        min: newValue,
-        max: existingValue.max,
-      }));
-  }, []);
-  const handleMaxSliderChange = useCallback((e: ChangeEvent) => {
-    const newValue = Number((e.target as HTMLInputElement).value);
-    const setter = settersMap.get(e.target.id.split("|")[1]);
-    setter &&
-      setter((existingValue) => ({
-        min: existingValue.min,
-        max: newValue,
-      }));
-  }, []);
+  const handleMinSliderChange = useCallback(
+    (e: ChangeEvent) => {
+      const newValue = Number((e.target as HTMLInputElement).value);
+      const {
+        value: { max },
+        setter,
+      } = settersMap.get(e.target.id.split("|")[1] as SuitabilitiesEnum)!;
+      if (newValue > max) return;
+      setter &&
+        setter((existingValue) => ({
+          min: newValue,
+          max: existingValue.max,
+        }));
+    },
+    [
+      kindling,
+      watering,
+      planting,
+      generatingElectricity,
+      medicineProduction,
+      handiwork,
+      gathering,
+      lumbering,
+      mining,
+      cooling,
+      transporting,
+      farming,
+    ]
+  );
+
+  const handleMaxSliderChange = useCallback(
+    (e: ChangeEvent) => {
+      const newValue = Number((e.target as HTMLInputElement).value);
+      const {
+        value: { min },
+        setter,
+      } = settersMap.get(e.target.id.split("|")[1] as SuitabilitiesEnum)!;
+      if (newValue < min) return;
+      setter &&
+        setter((existingValue) => ({
+          min: existingValue.min,
+          max: newValue,
+        }));
+    },
+    [
+      kindling,
+      watering,
+      planting,
+      generatingElectricity,
+      medicineProduction,
+      handiwork,
+      gathering,
+      lumbering,
+      mining,
+      cooling,
+      transporting,
+      farming,
+    ]
+  );
+
+  const resetFilters = () => {
+    SUITABILITIES.forEach((s) => {
+      const { setter } = settersMap.get(s)!;
+      setter(defaultFilter);
+    });
+  };
 
   return {
     handleMinSliderChange,
     handleMaxSliderChange,
+    resetFilters,
     suitabilityFilters: {
       kindling,
       watering,

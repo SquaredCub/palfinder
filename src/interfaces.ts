@@ -59,7 +59,12 @@ export enum SuitabilitiesEnum {
   FARMING = "farming",
 }
 
-export const enum2array = (e: object, valuesOnly = false) =>
+const enum2array = (e: object, valuesOnly = false) =>
   Object.entries(e).map(([key, value]) =>
     valuesOnly ? value : { key, value }
   );
+
+export const SUITABILITIES: SuitabilitiesEnum[] = enum2array(
+  SuitabilitiesEnum,
+  true
+);

@@ -5,33 +5,31 @@ import {
   isSuitabilityFilterDefault,
   useSuitabilityFilters,
 } from "./useSuitabilityFilters";
-import { SuitabilitiesEnum, type IPal, enum2array } from "./interfaces";
+import { type IPal, SUITABILITIES } from "./interfaces";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const suitabilites: SuitabilitiesEnum[] = enum2array(SuitabilitiesEnum, true);
-
 const App = () => {
-  const { handleMinSliderChange, handleMaxSliderChange, suitabilityFilters } =
-    useSuitabilityFilters();
+  const {
+    handleMinSliderChange,
+    handleMaxSliderChange,
+    resetFilters,
+    suitabilityFilters,
+  } = useSuitabilityFilters();
 
   const pals = allPals.filter((p) => {
     // Retirer les pals qui n'ont pas les propriété suitability equal or above values[s]
-    const doesThisPalRespectSuitabilityFilters = suitabilites.every((sName) => {
-      const filterValues = suitabilityFilters[sName];
-      if (isSuitabilityFilterDefault(filterValues)) return true;
-      // TODO Handle mix/max instead of just min value
-      const palSuitability =
-        p.suitability.find((palS) => palS.type === sName)?.level || 0;
-      console.log(
-        `${palSuitability} >= ${filterValues.min} && ${palSuitability} <= ${filterValues.max}`
-      );
-      console.log(
-        palSuitability >= filterValues.min && palSuitability <= filterValues.max
-      );
-      return (
-        palSuitability >= filterValues.min && palSuitability <= filterValues.max
-      );
-    });
+    const doesThisPalRespectSuitabilityFilters = SUITABILITIES.every(
+      (sName) => {
+        const filterValues = suitabilityFilters[sName];
+        if (isSuitabilityFilterDefault(filterValues)) return true;
+        const palSuitability =
+          p.suitability.find((palS) => palS.type === sName)?.level || 0;
+        return (
+          palSuitability >= filterValues.min &&
+          palSuitability <= filterValues.max
+        );
+      }
+    );
     // TODO Retirer les pals qui ne produisent pas les ressources désirée
 
     return doesThisPalRespectSuitabilityFilters;
@@ -40,10 +38,13 @@ const App = () => {
   return (
     <main>
       <section className="filters">
-        <h2>Filters</h2>
+        <div className="filters-title">
+          <h2>Filters</h2>
+          <button onClick={resetFilters}>Reset</button>
+        </div>
         <div className="group">
           <h3 className="group-title">Minimum Level</h3>
-          {suitabilites.map((s) => (
+          {SUITABILITIES.map((s) => (
             <label htmlFor={s} key={`minSuitabilityFilter${s}`}>
               <span>
                 <LazyLoadImage
@@ -72,7 +73,7 @@ const App = () => {
         </div>
         <div className="group">
           <h3 className="group-title">Maximum Level</h3>
-          {suitabilites.map((s) => (
+          {SUITABILITIES.map((s) => (
             <label htmlFor={s} key={`maxSuitabilityFilter${s}`}>
               <span>
                 <LazyLoadImage
