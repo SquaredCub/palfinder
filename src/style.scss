@@ -213,24 +213,24 @@ img {
   border: none !important;
   box-shadow: none !important;
   padding: 1rem !important;
-  flex-grow: 1;
-  min-width: 100px;
+  flex-grow: 1 !important;
+  min-width: 100px !important;
   .ruler {
     &-rule {
       padding: 2px 0px !important;
     }
   }
   .bar-inner {
-    background-color: #273034;
+    background-color: #273034 !important;
   }
   .bar .thumb .caption {
-    left: -2px;
+    left: -2px !important;
     .min-caption,
     .max-caption {
-      background-color: #273034;
-      justify-content: center;
-      align-items: center;
-      font-size: 1rem;
+      background-color: #273034 !important;
+      justify-content: center !important;
+      align-items: center !important;
+      font-size: 1rem !important;
     }
   }
 }
