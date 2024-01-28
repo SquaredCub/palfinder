@@ -1,6 +1,5 @@
-import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
+import { useState } from "react";
 
-import PalCard from "./PalCard";
 import { pals as allPals } from "./pals";
 import "./style.scss";
 import {
@@ -8,9 +7,10 @@ import {
   useSuitabilityFilters,
 } from "./useSuitabilityFilters";
 import { type IPal, SUITABILITIES } from "./interfaces";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { useState } from "react";
+
+import PalCard from "./PalCard";
 import MenuButton from "./MenuButton";
+import Filters from "./Filters";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -43,45 +43,12 @@ const App = () => {
   return (
     <main>
       <section className={`filtersSection ${menuOpen ? "open" : "collapsed"}`}>
-        <div className="filters">
-          <div className="filters-title">
-            <MenuButton handleToggleMenu={toggleMenu} />
-            <h2>Filters</h2>
-            <button onClick={resetFilters}>Reset</button>
-          </div>
-          <div className="group">
-            <h3 className="group-title">Working capabilities</h3>
-            {SUITABILITIES.map((s) => (
-              <label htmlFor={s} key={`minSuitabilityFilter${s}`}>
-                <span>
-                  <LazyLoadImage
-                    src={`/palfinder/images/suitabilities/${s.replace(
-                      " ",
-                      "_"
-                    )}.png`}
-                    width="30px"
-                    height="30px"
-                    title={`min ${s}`}
-                  />
-                </span>
-                <MultiRangeSlider
-                  min={0}
-                  max={4}
-                  step={1}
-                  minValue={suitabilityFilters[s].min}
-                  maxValue={suitabilityFilters[s].max}
-                  className="slider"
-                  id={s}
-                  onChange={(e: ChangeResult) => {
-                    console.log({ e });
-                    handleSliderChange({ ...e, name: s });
-                  }}
-                  canMinMaxValueSame
-                />
-              </label>
-            ))}
-          </div>
-        </div>
+        <Filters
+          toggleMenu={toggleMenu}
+          resetFilters={resetFilters}
+          suitabilityFilters={suitabilityFilters}
+          handleSliderChange={handleSliderChange}
+        />
       </section>
       <section className={`palsSection ${menuOpen ? "collapsed" : "open"}`}>
         <div className="menuButton-wrapper">
