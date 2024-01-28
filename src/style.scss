@@ -9,7 +9,7 @@ main {
   display: flex;
   .filters {
     padding: 1rem;
-    border: 1px solid red;
+    border: 1px solid #273034;
     align-self: flex-start;
     position: sticky;
     top: 0;
@@ -52,7 +52,7 @@ main {
 }
 
 .palcard {
-  border: 1px solid black;
+  border: 1px solid #273034;
   max-width: 350px;
   height: min-content;
   padding: 1rem;
