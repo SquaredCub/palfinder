@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 import { pals as allPals } from "./pals";
 import "./style.scss";
@@ -16,6 +16,7 @@ const App = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const { handleSliderChange, resetFilters, suitabilityFilters } =
     useSuitabilityFilters();
+  const [dropFilter, setDropFilter] = useState<string>("-");
 
   const pals = allPals.filter((p) => {
     // Retirer les pals qui n'ont pas les propriété suitability equal or above values[s]
@@ -31,13 +32,23 @@ const App = () => {
         );
       }
     );
-    // TODO Retirer les pals qui ne produisent pas les ressources désirée
-
-    return doesThisPalRespectSuitabilityFilters;
+    if (dropFilter !== "-") {
+      return (
+        doesThisPalRespectSuitabilityFilters && p.drops.includes(dropFilter)
+      );
+    } else {
+      return doesThisPalRespectSuitabilityFilters;
+    }
   });
 
   const toggleMenu = () => {
     setMenuOpen((old) => !old);
+  };
+
+  const handleFilterDropChange = (e: ChangeEvent) => {
+    const value = (e.target as HTMLSelectElement).value;
+    console.log(value);
+    setDropFilter(value);
   };
 
   return (
@@ -48,6 +59,9 @@ const App = () => {
           resetFilters={resetFilters}
           suitabilityFilters={suitabilityFilters}
           handleSliderChange={handleSliderChange}
+          handleFilterDropChange={handleFilterDropChange}
+          dropFilterValue={dropFilter}
+          setDropFilterValue={setDropFilter}
         />
       </section>
       <section className={`palsSection ${menuOpen ? "collapsed" : "open"}`}>
