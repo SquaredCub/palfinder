@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useState } from "react";
 import {
+  ISuitabilityFilters,
   MultiRangeChangeResult,
   SUITABILITIES,
   SuitabilitiesEnum,
@@ -14,13 +15,16 @@ const defaultFilter = {
   min: 0,
   max: 4,
 };
+
+export const suitabilityFiltersAreDefaults = (filters: ISuitabilityFilters) =>
+  SUITABILITIES.every((s) => isSuitabilityFilterDefault(filters[s]));
 export const isSuitabilityFilterDefault = (filter: ISuitabilityFilter) =>
   filter.max === defaultFilter.max && filter.min === defaultFilter.min;
 
 export const useSuitabilityFilters: () => {
   handleSliderChange: (e: MultiRangeChangeResult) => void;
   resetFilters: () => void;
-  suitabilityFilters: { [key in SuitabilitiesEnum]: ISuitabilityFilter };
+  suitabilityFilters: ISuitabilityFilters;
 } = () => {
   const [kindling, setKindling] = useState<ISuitabilityFilter>(defaultFilter);
   const [watering, setWatering] = useState<ISuitabilityFilter>(defaultFilter);
