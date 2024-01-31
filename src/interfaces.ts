@@ -1,4 +1,5 @@
 import { ChangeResult } from "multi-range-slider-react";
+import { ISuitabilityFilter } from "./useSuitabilityFilters";
 
 export interface IPal {
   id: number;
@@ -73,4 +74,8 @@ export const SUITABILITIES: SuitabilitiesEnum[] = enum2array(
 
 export type MultiRangeChangeResult = ChangeResult & {
   name: SuitabilitiesEnum;
+};
+
+export type ISuitabilityFilters = {
+  [key in SuitabilitiesEnum]: ISuitabilityFilter;
 };
