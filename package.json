@@ -2,7 +2,7 @@
   "name": "palfinder",
   "private": true,
   "version": "0.0.1",
-  "homepage": "https://jeanchristophem.github.io/palfinder",
+  "homepage": "https://squaredcub.github.io/palfinder",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
