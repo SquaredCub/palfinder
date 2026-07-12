@@ -2,7 +2,7 @@
   "name": "palfinder",
   "private": true,
   "version": "0.0.1",
-  "homepage": "https://jeanchristophem.github.io/palfinder",
+  "homepage": "https://squaredcub.github.io/palfinder",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -13,11 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/react-lazy-load-image-component": "^1.6.3",
-    "multi-range-slider-react": "^2.0.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-lazy-load-image-component": "^1.6.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -29,6 +26,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
+    "sass": "^1.101.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }

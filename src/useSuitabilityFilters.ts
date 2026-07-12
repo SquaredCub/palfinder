@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import {
   ISuitabilityFilters,
+  MAX_WORK_LEVEL,
   MultiRangeChangeResult,
   SUITABILITIES,
   SuitabilitiesEnum,
@@ -13,7 +14,7 @@ export type ISuitabilityFilter = {
 };
 const defaultFilter = {
   min: 0,
-  max: 4,
+  max: MAX_WORK_LEVEL,
 };
 
 export const suitabilityFiltersAreDefaults = (filters: ISuitabilityFilters) =>
@@ -21,9 +22,22 @@ export const suitabilityFiltersAreDefaults = (filters: ISuitabilityFilters) =>
 export const isSuitabilityFilterDefault = (filter: ISuitabilityFilter) =>
   filter.max === defaultFilter.max && filter.min === defaultFilter.min;
 
+// Solo = the clicked work requires at least level 1 while every other range
+// is pinned to 0-0. This is the state the icon toggle creates, and the only
+// state in which the icon lights up.
+export const isSuitabilitySoloed = (
+  filters: ISuitabilityFilters,
+  name: SuitabilitiesEnum
+) =>
+  filters[name].min >= 1 &&
+  SUITABILITIES.every(
+    (s) => s === name || (filters[s].min === 0 && filters[s].max === 0)
+  );
+
 export const useSuitabilityFilters: () => {
   handleSliderChange: (e: MultiRangeChangeResult) => void;
   resetFilters: () => void;
+  toggleSoloFilter: (name: SuitabilitiesEnum) => void;
   suitabilityFilters: ISuitabilityFilters;
 } = () => {
   const [kindling, setKindling] = useState<ISuitabilityFilter>(defaultFilter);
@@ -91,7 +105,55 @@ export const useSuitabilityFilters: () => {
     ]
   );
 
+  // Filters as they were right before the last solo toggle-on, so toggling
+  // off can restore them.
+  const preSoloFiltersRef = useRef<ISuitabilityFilters | null>(null);
+
+  const currentFilters = (): ISuitabilityFilters => {
+    const out = {} as ISuitabilityFilters;
+    SUITABILITIES.forEach((s) => {
+      out[s] = settersMap.get(s)!.value;
+    });
+    return out;
+  };
+
+  const toggleSoloFilter = (name: SuitabilitiesEnum) => {
+    const current = currentFilters();
+    if (isSuitabilitySoloed(current, name)) {
+      // Toggle off. Only restore the snapshot if the filters are still
+      // exactly as the toggle-on left them; if the user tweaked them since,
+      // just release the clicked work's minimum.
+      const untouched =
+        current[name].min === 1 && current[name].max === MAX_WORK_LEVEL;
+      if (untouched) {
+        // No snapshot means the toggle-on happened from another work's solo
+        // state — nothing sensible to go back to, so reset everything.
+        const snapshot = preSoloFiltersRef.current;
+        SUITABILITIES.forEach((s) =>
+          settersMap.get(s)!.setter(snapshot ? snapshot[s] : defaultFilter)
+        );
+      } else {
+        settersMap.get(name)!.setter({ min: 0, max: current[name].max });
+      }
+      preSoloFiltersRef.current = null;
+    } else {
+      // Don't snapshot another work's solo state; toggling off should reset
+      // instead of hopping back to the previous solo.
+      const cameFromAnotherSolo = SUITABILITIES.some((s) =>
+        isSuitabilitySoloed(current, s)
+      );
+      preSoloFiltersRef.current = cameFromAnotherSolo ? null : current;
+      SUITABILITIES.forEach((s) => {
+        const { setter } = settersMap.get(s)!;
+        setter(
+          s === name ? { min: 1, max: MAX_WORK_LEVEL } : { min: 0, max: 0 }
+        );
+      });
+    }
+  };
+
   const resetFilters = () => {
+    preSoloFiltersRef.current = null;
     SUITABILITIES.forEach((s) => {
       const { setter } = settersMap.get(s)!;
       setter(defaultFilter);
@@ -101,6 +163,7 @@ export const useSuitabilityFilters: () => {
   return {
     handleSliderChange,
     resetFilters,
+    toggleSoloFilter,
     suitabilityFilters: {
       kindling,
       watering,

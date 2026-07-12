@@ -1,4 +1,3 @@
-import { ChangeResult } from "multi-range-slider-react";
 import { ISuitabilityFilter } from "./useSuitabilityFilters";
 
 export interface IPal {
@@ -47,6 +46,21 @@ export enum TypesEnum {
   DRAGON = "dragon",
 }
 
+// Highest work suitability level in the game (alpha/subspecies pals reach 8)
+export const MAX_WORK_LEVEL = 8;
+
+export const TYPE_COLORS: Record<TypesEnum, string> = {
+  [TypesEnum.NEUTRAL]: "#a8b0b8",
+  [TypesEnum.GRASS]: "#7bc74d",
+  [TypesEnum.FIRE]: "#f2704e",
+  [TypesEnum.WATER]: "#4fa9ec",
+  [TypesEnum.ELECTRIC]: "#f5cd4b",
+  [TypesEnum.ICE]: "#7fd8e8",
+  [TypesEnum.GROUND]: "#c9954f",
+  [TypesEnum.DARK]: "#c25577",
+  [TypesEnum.DRAGON]: "#9d71e8",
+};
+
 export enum SuitabilitiesEnum {
   KINDLING = "kindling",
   WATERING = "watering",
@@ -72,7 +86,13 @@ export const SUITABILITIES: SuitabilitiesEnum[] = enum2array(
   true
 );
 
-export type MultiRangeChangeResult = ChangeResult & {
+export const TYPES: TypesEnum[] = enum2array(TypesEnum, true);
+
+export type MultiRangeChangeResult = {
+  min: number;
+  max: number;
+  minValue: number;
+  maxValue: number;
   name: SuitabilitiesEnum;
 };
 
