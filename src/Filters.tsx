@@ -1,18 +1,21 @@
 import {
-  MAX_WORK_LEVEL,
   MultiRangeChangeResult,
   SUITABILITIES,
   SuitabilitiesEnum,
   TYPES,
   TypesEnum,
 } from "./interfaces";
-import { ISuitabilityFilter } from "./useSuitabilityFilters";
+import {
+  ISuitabilityFilter,
+  isSuitabilitySoloed,
+} from "./useSuitabilityFilters";
 import SuitabilitySlider from "./SuitabilitySlider";
 import { items } from "./items";
 import { ChangeEvent } from "react";
 
 interface IFiltersProps {
   resetFilters: () => void;
+  toggleSoloFilter: (name: SuitabilitiesEnum) => void;
   suitabilityFilters: { [key in SuitabilitiesEnum]: ISuitabilityFilter };
   handleSliderChange: (e: MultiRangeChangeResult) => void;
   handleFilterDropChange: (e: ChangeEvent) => void;
@@ -25,6 +28,7 @@ interface IFiltersProps {
 
 const Filters: React.FC<IFiltersProps> = ({
   resetFilters,
+  toggleSoloFilter,
   suitabilityFilters,
   handleSliderChange,
   handleFilterDropChange,
@@ -45,22 +49,14 @@ const Filters: React.FC<IFiltersProps> = ({
           <button onClick={resetFilters}>Reset</button>
         </h3>
         {SUITABILITIES.map((s) => {
-          const hasWork = suitabilityFilters[s].min > 0;
+          const isSoloed = isSuitabilitySoloed(suitabilityFilters, s);
           return (
             <div className="filterRow" key={`minSuitabilityFilter${s}`}>
               <button
-                className={`suitToggle ${hasWork ? "isActive" : ""}`}
-                aria-pressed={hasWork}
+                className={`suitToggle ${isSoloed ? "isActive" : ""}`}
+                aria-pressed={isSoloed}
                 title={`only pals with ${s}`}
-                onClick={() =>
-                  handleSliderChange({
-                    min: 0,
-                    max: MAX_WORK_LEVEL,
-                    minValue: hasWork ? 0 : 1,
-                    maxValue: suitabilityFilters[s].max,
-                    name: s,
-                  })
-                }
+                onClick={() => toggleSoloFilter(s)}
               >
                 <img
                   src={`/palfinder/images/suitabilities/${s.replace(

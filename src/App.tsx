@@ -15,8 +15,12 @@ import Filters from "./Filters";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const { handleSliderChange, resetFilters, suitabilityFilters } =
-    useSuitabilityFilters();
+  const {
+    handleSliderChange,
+    resetFilters,
+    toggleSoloFilter,
+    suitabilityFilters,
+  } = useSuitabilityFilters();
   const [dropFilter, setDropFilter] = useState<string>("-");
   const [searchFilter, setSearchFilter] = useState<string>("");
   // Deferred copy of the search text: the input updates instantly while the
@@ -124,6 +128,7 @@ const App = () => {
         >
           <Filters
             resetFilters={resetFilters}
+            toggleSoloFilter={toggleSoloFilter}
             suitabilityFilters={suitabilityFilters}
             handleSliderChange={handleSliderChange}
             handleFilterDropChange={handleFilterDropChange}
