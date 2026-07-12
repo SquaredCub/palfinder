@@ -1,74 +1,91 @@
-import { ChangeResult } from "multi-range-slider-react";
-import MenuButton from "./MenuButton";
 import {
+  MAX_WORK_LEVEL,
   MultiRangeChangeResult,
   SUITABILITIES,
   SuitabilitiesEnum,
+  TYPES,
+  TypesEnum,
 } from "./interfaces";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ISuitabilityFilter } from "./useSuitabilityFilters";
 import SuitabilitySlider from "./SuitabilitySlider";
 import { items } from "./items";
 import { ChangeEvent } from "react";
 
 interface IFiltersProps {
-  toggleMenu: () => void;
   resetFilters: () => void;
   suitabilityFilters: { [key in SuitabilitiesEnum]: ISuitabilityFilter };
   handleSliderChange: (e: MultiRangeChangeResult) => void;
   handleFilterDropChange: (e: ChangeEvent) => void;
   dropFilterValue: string;
   setDropFilterValue: (x: string) => void;
+  selectedTypes: TypesEnum[];
+  toggleType: (t: TypesEnum) => void;
+  resetTypes: () => void;
 }
 
 const Filters: React.FC<IFiltersProps> = ({
-  toggleMenu,
   resetFilters,
   suitabilityFilters,
   handleSliderChange,
   handleFilterDropChange,
   dropFilterValue,
   setDropFilterValue,
+  selectedTypes,
+  toggleType,
+  resetTypes,
 }) => {
   return (
     <div className="filters">
       <div className="filters-title">
-        <MenuButton handleToggleMenu={toggleMenu} />
         <h2>Filters</h2>
       </div>
       <div className="group">
         <h3 className="group-title">
-          <span>Working capabilities</span>
-          <button onClick={resetFilters}>reset</button>
+          <span>Work suitability</span>
+          <button onClick={resetFilters}>Reset</button>
         </h3>
-        {SUITABILITIES.map((s) => (
-          <label htmlFor={s} key={`minSuitabilityFilter${s}`}>
-            <span>
-              <LazyLoadImage
-                src={`/palfinder/images/suitabilities/${s.replace(
-                  " ",
-                  "_"
-                )}.png`}
-                width="30px"
-                height="30px"
-                title={`min ${s}`}
+        {SUITABILITIES.map((s) => {
+          const hasWork = suitabilityFilters[s].min > 0;
+          return (
+            <div className="filterRow" key={`minSuitabilityFilter${s}`}>
+              <button
+                className={`suitToggle ${hasWork ? "isActive" : ""}`}
+                aria-pressed={hasWork}
+                title={`only pals with ${s}`}
+                onClick={() =>
+                  handleSliderChange({
+                    min: 0,
+                    max: MAX_WORK_LEVEL,
+                    minValue: hasWork ? 0 : 1,
+                    maxValue: suitabilityFilters[s].max,
+                    name: s,
+                  })
+                }
+              >
+                <img
+                  src={`/palfinder/images/suitabilities/${s.replace(
+                    " ",
+                    "_"
+                  )}.png`}
+                  width={26}
+                  height={26}
+                  alt={s}
+                />
+              </button>
+              <SuitabilitySlider
+                minValue={suitabilityFilters[s].min}
+                maxValue={suitabilityFilters[s].max}
+                name={s}
+                changeHandler={handleSliderChange}
               />
-            </span>
-            <SuitabilitySlider
-              minValue={suitabilityFilters[s].min}
-              maxValue={suitabilityFilters[s].max}
-              name={s}
-              changeHandler={(e: ChangeResult) => {
-                handleSliderChange({ ...e, name: s });
-              }}
-            />
-          </label>
-        ))}
+            </div>
+          );
+        })}
       </div>
       <div className="group">
         <h3 className="group-title">
-          <span>Resource drop</span>
-          <button onClick={() => setDropFilterValue("-")}>reset</button>
+          <span>Drops item</span>
+          <button onClick={() => setDropFilterValue("-")}>Reset</button>
         </h3>
         <label htmlFor="dropSelect">
           <select
@@ -77,7 +94,7 @@ const Filters: React.FC<IFiltersProps> = ({
             onChange={handleFilterDropChange}
             value={dropFilterValue}
           >
-            <option value="-">-------</option>
+            <option value="-">Any item</option>
             {items.map((i) => (
               <option value={i} key={i}>
                 {i}
@@ -85,6 +102,32 @@ const Filters: React.FC<IFiltersProps> = ({
             ))}
           </select>
         </label>
+      </div>
+      <div className="group">
+        <h3 className="group-title">
+          <span>Element</span>
+          <button onClick={resetTypes}>Reset</button>
+        </h3>
+        <div className="typeGrid">
+          {TYPES.map((t) => (
+            <button
+              key={t}
+              className={`typeToggle ${
+                selectedTypes.includes(t) ? "isActive" : ""
+              }`}
+              aria-pressed={selectedTypes.includes(t)}
+              title={t}
+              onClick={() => toggleType(t)}
+            >
+              <img
+                src={`/palfinder/images/types/${t}.png`}
+                width={22}
+                height={22}
+                alt={t}
+              />
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

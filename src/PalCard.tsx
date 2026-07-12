@@ -2,71 +2,82 @@ import React from "react";
 
 import SuitabilityChip from "./SuitabilityChip";
 
-import { type IPal, SUITABILITIES } from "./interfaces";
+import { type IPal, SUITABILITIES, TYPE_COLORS } from "./interfaces";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface IPalCardProps {
   pal: IPal;
 }
 
+const itemImage = (drop: string) =>
+  `/palfinder/images/items/${drop
+    .replaceAll(" ", "_")
+    .replaceAll("'", "")
+    .toLowerCase()}.png`;
+
 const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
   const { key, name, types, suitability, drops, aura, description, image } =
     pal;
+  const orderedSuitability = [...suitability].sort(
+    (a, b) => SUITABILITIES.indexOf(a.type) - SUITABILITIES.indexOf(b.type)
+  );
   return (
-    <div className="palcard">
-      <div className="name">{name}</div>
-      <div className="key">{key}</div>
-      <div className="description">{description}</div>
-      <div className="types">
-        {types.map((t) => {
-          return (
-            <LazyLoadImage
+    <article
+      className="palcard"
+      style={
+        {
+          "--element": TYPE_COLORS[types[0]],
+          "--element2": TYPE_COLORS[types[1] ?? types[0]],
+        } as React.CSSProperties
+      }
+    >
+      <header className="palcard-head">
+        <span className="key">No.{key}</span>
+        <h3 className="name">{name}</h3>
+        <div className="types">
+          {types.map((t) => (
+            <img
               src={`/palfinder/images/types/${t}.png`}
-              width="20px"
-              height="20px"
+              width={22}
+              height={22}
               key={t + key}
               title={t}
+              alt={t}
             />
-          );
-        })}
+          ))}
+        </div>
+      </header>
+      <div className="palcard-main">
+        <div className="portrait">
+          <LazyLoadImage src={image} width="90px" height="90px" alt={name} />
+        </div>
+        <div className="aura">
+          <span className="aura-label">Partner skill</span>
+          <span className="aura-name">{aura.name}</span>
+          <p className="aura-description">{aura.description}</p>
+        </div>
       </div>
-      <div className="imageWiki">
-        <LazyLoadImage
-          src={image}
-          width="100px"
-          height="100px"
-        />
-      </div>
+      {description && <p className="description">{description}</p>}
       <div className="suitability">
-        {SUITABILITIES.map((sName) => (
-          <SuitabilityChip
-            name={sName}
-            level={suitability.find((ps) => ps.type === sName)?.level || 0}
-            key={sName + key}
-          />
+        {orderedSuitability.map((s) => (
+          <SuitabilityChip name={s.type} level={s.level} key={s.type + key} />
         ))}
       </div>
       <div className="drops">
         {drops.map((d) => (
-          <div key={d + key}>
-            <span>{d}</span>
+          <div className="drop" key={d + key}>
             <LazyLoadImage
-              src={`/palfinder/images/items/${d
-                .replaceAll(" ", "_")
-                .replaceAll("'", "")
-                .toLowerCase()}.png`}
-              width="30px"
-              height="30px"
+              src={itemImage(d)}
+              width="20px"
+              height="20px"
               title={d}
+              alt=""
             />
+            <span>{d}</span>
           </div>
         ))}
       </div>
-      <div className="aura">
-        <div className="aura-name">{aura.name}</div>
-        <div className="aura-description">{aura.description}</div>
-      </div>
-    </div>
+    </article>
   );
 };
 

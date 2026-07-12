@@ -973,7 +973,7 @@ export const pals: IPal[] = [
     drops: ["Ice Organ", "Sapphire"],
     aura: {
       name: "Icy Whispers",
-      description: "Sometimes drops <itemName id=|Iceorgan| style=|Status_Keyword|/> when assigned to Ranch.",
+      description: "Sometimes drops Ice Organ when assigned to Ranch.",
     },
     description: "Its crystalline tail is beautiful, but shatters when this Pal dies. Some believe it is good luck to raise them, so Mau Cryst in captivity are treated with great care.",
   },

@@ -7,7 +7,7 @@ import {
   suitabilityFiltersAreDefaults,
   useSuitabilityFilters,
 } from "./useSuitabilityFilters";
-import { type IPal, SUITABILITIES } from "./interfaces";
+import { type IPal, SUITABILITIES, TypesEnum } from "./interfaces";
 
 import PalCard from "./PalCard";
 import MenuButton from "./MenuButton";
@@ -19,6 +19,13 @@ const App = () => {
     useSuitabilityFilters();
   const [dropFilter, setDropFilter] = useState<string>("-");
   const [searchFilter, setSearchFilter] = useState<string>("");
+  const [typeFilter, setTypeFilter] = useState<TypesEnum[]>([]);
+
+  const toggleType = (t: TypesEnum) => {
+    setTypeFilter((old) =>
+      old.includes(t) ? old.filter((x) => x !== t) : [...old, t]
+    );
+  };
 
   const pals = allPals.filter((p) => {
     // Retirer les pals qui n'ont pas les propriété suitability equal or above values[s]
@@ -41,6 +48,11 @@ const App = () => {
         }
       }
     }
+    // Retirer les pals qui n'ont pas TOUS les éléments sélectionnés
+    if (typeFilter.length > 0) {
+      if (!typeFilter.every((t) => p.types.includes(t))) return false;
+    }
+
     // Retirer les pals qui ne dropent pas ce qu'on veut
     if (dropFilter !== "-") {
       if (!p.drops.includes(dropFilter)) return false;
@@ -70,50 +82,64 @@ const App = () => {
 
   const handleFilterDropChange = (e: ChangeEvent) => {
     const value = (e.target as HTMLSelectElement).value;
-    console.log(value);
     setDropFilter(value);
   };
 
   return (
-    <main>
-      <section className={`filtersSection ${menuOpen ? "open" : "collapsed"}`}>
-        <Filters
-          toggleMenu={toggleMenu}
-          resetFilters={resetFilters}
-          suitabilityFilters={suitabilityFilters}
-          handleSliderChange={handleSliderChange}
-          handleFilterDropChange={handleFilterDropChange}
-          dropFilterValue={dropFilter}
-          setDropFilterValue={setDropFilter}
-        />
-      </section>
-      <section className={`palsSection ${menuOpen ? "collapsed" : "open"}`}>
+    <>
+      <header className="topBar">
+        <h1 className="brand">
+          Pal<span>finder</span>
+        </h1>
+        <div className="searchBar">
+          <div className="inputWrapper">
+            <span>
+              <img
+                src="/palfinder/images/search-bar-icon.svg"
+                alt=""
+                id="icon"
+              />
+            </span>
+            <input
+              type="text"
+              placeholder="Search pals, types, partner skills…"
+              value={searchFilter}
+              onChange={(e) => setSearchFilter(e.target.value)}
+            />
+          </div>
+        </div>
+        <span className="resultCount">
+          {pals.length} / {allPals.length} pals
+        </span>
+      </header>
+      <main>
         <div className="menuButton-wrapper">
           <MenuButton handleToggleMenu={toggleMenu} />
         </div>
-        <div className="pals">
-          <div className="searchBar">
-            <div className="inputWrapper">
-              <span>
-                <img
-                  src="/palfinder/images/search-bar-icon.svg"
-                  alt=""
-                  id="icon"
-                />
-              </span>
-              <input
-                type="text"
-                value={searchFilter}
-                onChange={(e) => setSearchFilter(e.target.value)}
-              />
-            </div>
+        <section
+          className={`filtersSection ${menuOpen ? "open" : "collapsed"}`}
+        >
+          <Filters
+            resetFilters={resetFilters}
+            suitabilityFilters={suitabilityFilters}
+            handleSliderChange={handleSliderChange}
+            handleFilterDropChange={handleFilterDropChange}
+            dropFilterValue={dropFilter}
+            setDropFilterValue={setDropFilter}
+            selectedTypes={typeFilter}
+            toggleType={toggleType}
+            resetTypes={() => setTypeFilter([])}
+          />
+        </section>
+        <section className={`palsSection ${menuOpen ? "collapsed" : "open"}`}>
+          <div className="pals">
+            {pals.map((p) => (
+              <PalCard pal={p as IPal} key={p.id} />
+            ))}
           </div>
-          {pals.map((p) => (
-            <PalCard pal={p as IPal} key={p.id} />
-          ))}
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 };
 

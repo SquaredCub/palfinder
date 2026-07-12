@@ -2,6 +2,7 @@
 import { useCallback, useState } from "react";
 import {
   ISuitabilityFilters,
+  MAX_WORK_LEVEL,
   MultiRangeChangeResult,
   SUITABILITIES,
   SuitabilitiesEnum,
@@ -13,7 +14,7 @@ export type ISuitabilityFilter = {
 };
 const defaultFilter = {
   min: 0,
-  max: 4,
+  max: MAX_WORK_LEVEL,
 };
 
 export const suitabilityFiltersAreDefaults = (filters: ISuitabilityFilters) =>
