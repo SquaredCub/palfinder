@@ -313,6 +313,10 @@ main {
 
 //_ Pal card — a paldeck entry, accented by its primary element
 .palcard {
+  // Skip layout/paint of off-screen cards; the intrinsic size reserves
+  // approximate space so the scrollbar stays stable.
+  content-visibility: auto;
+  contain-intrinsic-size: auto 340px;
   --element: #{$muted};
   position: relative;
   display: flex;

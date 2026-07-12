@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useDeferredValue, useState } from "react";
 
 import { pals as allPals } from "./pals";
 import "./style.scss";
@@ -19,6 +19,9 @@ const App = () => {
     useSuitabilityFilters();
   const [dropFilter, setDropFilter] = useState<string>("-");
   const [searchFilter, setSearchFilter] = useState<string>("");
+  // Deferred copy of the search text: the input updates instantly while the
+  // expensive re-render of the pal grid happens at low priority.
+  const deferredSearchFilter = useDeferredValue(searchFilter);
   const [typeFilter, setTypeFilter] = useState<TypesEnum[]>([]);
 
   const toggleType = (t: TypesEnum) => {
@@ -59,7 +62,7 @@ const App = () => {
     }
 
     // Retirer les pals qui n'ont pas le searchFilter inclus qqpart
-    if (searchFilter !== "") {
+    if (deferredSearchFilter !== "") {
       const isSearchFilterIncluded = [
         // ...p.drops,
         p.name,
@@ -69,7 +72,7 @@ const App = () => {
         // p.description,
       ]
         .map((str) => str.toLowerCase())
-        .some((data) => data.includes(searchFilter.toLowerCase()));
+        .some((data) => data.includes(deferredSearchFilter.toLowerCase()));
       if (!isSearchFilterIncluded) return false;
     }
 

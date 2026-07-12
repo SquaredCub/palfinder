@@ -3,7 +3,6 @@ import React from "react";
 import SuitabilityChip from "./SuitabilityChip";
 
 import { type IPal, SUITABILITIES, TYPE_COLORS } from "./interfaces";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface IPalCardProps {
   pal: IPal;
@@ -49,7 +48,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       </header>
       <div className="palcard-main">
         <div className="portrait">
-          <LazyLoadImage src={image} width="90px" height="90px" alt={name} />
+          <img src={image} width={90} height={90} alt={name} loading="lazy" />
         </div>
         <div className="aura">
           <span className="aura-label">Partner skill</span>
@@ -66,12 +65,13 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       <div className="drops">
         {drops.map((d) => (
           <div className="drop" key={d + key}>
-            <LazyLoadImage
+            <img
               src={itemImage(d)}
-              width="20px"
-              height="20px"
+              width={20}
+              height={20}
               title={d}
               alt=""
+              loading="lazy"
             />
             <span>{d}</span>
           </div>
