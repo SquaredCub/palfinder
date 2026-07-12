@@ -147,6 +147,26 @@ const App = () => {
           </div>
         </section>
       </main>
+      <footer className="siteFooter">
+        <p>
+          Enjoying Palfinder? It's free and{" "}
+          <a
+            href="https://github.com/SquaredCub/palfinder"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open source
+          </a>{" "}
+          — but if you'd like to support its development, you can{" "}
+          <a
+            href="https://www.paypal.com/paypalme/SquaredCub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            buy me a coffee&nbsp;☕
+          </a>
+        </p>
+      </footer>
     </>
   );
 };
