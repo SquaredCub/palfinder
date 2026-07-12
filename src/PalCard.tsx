@@ -10,7 +10,8 @@ interface IPalCardProps {
 }
 
 const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
-  const { key, name, types, suitability, drops, aura, description } = pal;
+  const { key, name, types, suitability, drops, aura, description, image } =
+    pal;
   return (
     <div className="palcard">
       <div className="name">{name}</div>
@@ -31,7 +32,7 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       </div>
       <div className="imageWiki">
         <LazyLoadImage
-          src={`/palfinder/images/pals/${name.toLowerCase()}.png`}
+          src={image}
           width="100px"
           height="100px"
         />
@@ -50,11 +51,10 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
           <div key={d + key}>
             <span>{d}</span>
             <LazyLoadImage
-              src={`/palfinder/images/items/${
-                d.includes("cloth")
-                  ? "cloth"
-                  : d.replaceAll(" ", "_").toLowerCase()
-              }.png`}
+              src={`/palfinder/images/items/${d
+                .replaceAll(" ", "_")
+                .replaceAll("'", "")
+                .toLowerCase()}.png`}
               width="30px"
               height="30px"
               title={d}
