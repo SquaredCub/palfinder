@@ -2,7 +2,12 @@ import React from "react";
 
 import SuitabilityChip from "./SuitabilityChip";
 
-import { type IPal, SUITABILITIES, TYPE_COLORS } from "./interfaces";
+import {
+  type IPal,
+  DEFAULT_TYPE_COLOR,
+  SUITABILITIES,
+  TYPE_COLORS,
+} from "./interfaces";
 
 interface IPalCardProps {
   pal: IPal;
@@ -20,13 +25,15 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
   const orderedSuitability = [...suitability].sort(
     (a, b) => SUITABILITIES.indexOf(a.type) - SUITABILITIES.indexOf(b.type)
   );
+  const element = TYPE_COLORS[types[0]] ?? DEFAULT_TYPE_COLOR;
+  const element2 = TYPE_COLORS[types[1] ?? types[0]] ?? element;
   return (
     <article
       className="palcard"
       style={
         {
-          "--element": TYPE_COLORS[types[0]],
-          "--element2": TYPE_COLORS[types[1] ?? types[0]],
+          "--element": element,
+          "--element2": element2,
         } as React.CSSProperties
       }
     >

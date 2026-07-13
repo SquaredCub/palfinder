@@ -49,6 +49,10 @@ export enum TypesEnum {
 // Highest work suitability level in the game (alpha/subspecies pals reach 8)
 export const MAX_WORK_LEVEL = 8;
 
+// Fallback for pals with no element (e.g. Astralym, whose paldex entry is
+// still a mystery in-game)
+export const DEFAULT_TYPE_COLOR = "#a8b0b8";
+
 export const TYPE_COLORS: Record<TypesEnum, string> = {
   [TypesEnum.NEUTRAL]: "#a8b0b8",
   [TypesEnum.GRASS]: "#7bc74d",
