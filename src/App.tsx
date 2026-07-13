@@ -88,6 +88,10 @@ const App = () => {
   });
 
   const toggleMenu = () => {
+    // The filter panel shares the page scroll with the pal list; when it
+    // opens, jump to the top so the list's scroll offset doesn't land the
+    // viewport below the (much shorter) panel.
+    if (!menuOpen) window.scrollTo({ top: 0 });
     setMenuOpen((old) => !old);
   };
 
