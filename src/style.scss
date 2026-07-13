@@ -590,6 +590,14 @@ img {
   p {
     margin: 0;
   }
+  .credits {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.75;
+    a {
+      font-weight: 400;
+    }
+  }
   a {
     color: $accent;
     font-weight: 700;

@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Palfinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, filterable paldex for [Palworld](https://www.pocketpair.jp/palworld). Browse every pal and filter by work suitability levels, element, and item drops — handy for planning your base workforce.
 
-Currently, two official plugins are available:
+**Live site:** https://squaredcub.github.io/palfinder/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Full paldex including B-variants and raid pals
+- Work suitability filters with min/max level ranges, plus one-click "solo" toggles to show pals that do one job exclusively
+- Filter by element and by dropped item
+- Free-text search across names, elements, and partner skills
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Development
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+npm install
+npm run dev      # local dev server
+npm run build    # typecheck + production build
+npm run deploy   # build and publish to GitHub Pages
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Updating game data
+
+`src/pals.ts` and `src/items.ts` are generated — don't edit them by hand. After a Palworld update:
+
+```sh
+node scripts/update-pals.mjs --refresh
+```
+
+This scrapes the latest paldex from [paldb.cc](https://paldb.cc), regenerates the data files, and downloads icons for any new pals. Detail pages are cached in `scripts/.palcache/`; `--refresh` bypasses the cache.
+
+## Credits
+
+- Pal data and images sourced from [paldb.cc](https://paldb.cc)
+- Palworld and all game assets are © [Pocketpair, Inc.](https://www.pocketpair.jp)
+
+This is an unofficial fan project and is not affiliated with or endorsed by Pocketpair.

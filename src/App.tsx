@@ -166,6 +166,25 @@ const App = () => {
             buy me a coffee&nbsp;☕
           </a>
         </p>
+        <p className="credits">
+          Pal data and images sourced from{" "}
+          <a
+            href="https://paldb.cc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            paldb.cc
+          </a>
+          . Palworld and all game assets are ©{" "}
+          <a
+            href="https://www.pocketpair.jp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pocketpair, Inc.
+          </a>{" "}
+          This is an unofficial fan project.
+        </p>
       </footer>
     </>
   );
