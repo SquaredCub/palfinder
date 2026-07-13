@@ -24,6 +24,8 @@ interface IFiltersProps {
   selectedTypes: TypesEnum[];
   toggleType: (t: TypesEnum) => void;
   resetTypes: () => void;
+  sleeplessOnly: boolean;
+  toggleSleepless: () => void;
 }
 
 const Filters: React.FC<IFiltersProps> = ({
@@ -37,6 +39,8 @@ const Filters: React.FC<IFiltersProps> = ({
   selectedTypes,
   toggleType,
   resetTypes,
+  sleeplessOnly,
+  toggleSleepless,
 }) => {
   return (
     <div className="filters">
@@ -98,6 +102,19 @@ const Filters: React.FC<IFiltersProps> = ({
             ))}
           </select>
         </label>
+      </div>
+      <div className="group">
+        <h3 className="group-title">
+          <span>Sleepless</span>
+          <button
+            className={`sleeplessToggle ${sleeplessOnly ? "isActive" : ""}`}
+            aria-pressed={sleeplessOnly}
+            title="only pals that work through the night"
+            onClick={toggleSleepless}
+          >
+            {sleeplessOnly ? "On" : "Off"}
+          </button>
+        </h3>
       </div>
       <div className="group">
         <h3 className="group-title">

@@ -172,7 +172,11 @@ function parseDetailPage(html) {
     }
   }
 
-  return { description, aura, drops };
+  // Nocturnal pals ("Sleepless" in-game) work through the night; the row is
+  // only present on paldb when the flag is set.
+  const nocturnal = /<div>Nocturnal<\/div>\s*<div>1<\/div>/.test(html);
+
+  return { description, aura, drops, nocturnal };
 }
 
 // ---------- icon download ----------
@@ -228,6 +232,7 @@ function generatePalsTs(pals) {
     lines.push(`      name: ${JSON.stringify(p.aura.name)},`);
     lines.push(`      description: ${JSON.stringify(p.aura.description)},`);
     lines.push("    },");
+    lines.push(`    nocturnal: ${p.nocturnal},`);
     lines.push(`    description: ${JSON.stringify(p.description)},`);
     lines.push("  },");
   });

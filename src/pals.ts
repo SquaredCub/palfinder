@@ -27,6 +27,7 @@ export const pals: IPal[] = [
       name: "Fluffy Shield",
       description: "When activated, equips to the player and becomes a shield. Sometimes drops Wool when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "A walk up a hill tends to end with this Pal tumbling back down. This causes it to become dizzy and unable to move, making it easy to capture and kill. As a result, this Pal has tumbled down to the very bottom of the food chain itself.",
   },
   {
@@ -59,6 +60,7 @@ export const pals: IPal[] = [
       name: "Cat Helper",
       description: "While in party, Cattiva helps carry supplies, increasing the player's max carrying capacity by (100~200). (Does not stack)",
     },
+    nocturnal: false,
     description: "At a glance it appears full of confidence, but it is in fact weak and cowardly. Being toyed with by a Cattiva is in many ways the greatest of disgraces.",
   },
   {
@@ -83,6 +85,7 @@ export const pals: IPal[] = [
       name: "Egg Layer",
       description: "Sometimes lays an Egg when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Extremely weak and far too delicious. It is one of the weakest Pals alongside Lamball. No matter how many are hunted, they just keep appearing.",
   },
   {
@@ -119,6 +122,7 @@ export const pals: IPal[] = [
       name: "Lifmunk Recoil",
       description: "When activated, leaps onto the player's head and uses a submachine gun to follows up player attacks.",
     },
+    nocturnal: false,
     description: "Intelligent as a five to seven-year-old human child. It makes a wonderful partner, but there have been more than a few cases where they've killed their master after learning to use weapons.",
   },
   {
@@ -147,6 +151,7 @@ export const pals: IPal[] = [
       name: "Surfing Slam",
       description: "When activated, Fuack body surfs towards an enemy and slams into them.",
     },
+    nocturnal: false,
     description: "Using its own body water, this Pal can create waves anywhere. It body surfs when in a hurry, but the resulting speed often ends in a fatal collision.",
   },
   {
@@ -179,6 +184,7 @@ export const pals: IPal[] = [
       name: "Fire Tackle",
       description: "When activated, Fuack Ignis fire surfs towards an enemy and slams into them.",
     },
+    nocturnal: false,
     description: "With a belly built for friction, this Pal sparks flames as it body surfs. But when it gets carried away, it often ends up a rolling fireball.",
   },
   {
@@ -203,6 +209,7 @@ export const pals: IPal[] = [
       name: "Dig Here!",
       description: "Sometimes digs up items from the ground when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "The idol of Palpagos Island. If you bully a Vixy, you best be prepared to become enemies with the whole world.",
   },
   {
@@ -227,6 +234,7 @@ export const pals: IPal[] = [
       name: "Zephyr Glider",
       description: "While in party, modifies the performance of the equipped glider. Prevents fall damage and extends the duration of high-speed gliding.",
     },
+    nocturnal: false,
     description: "Riding the wind, this Pal travels where it pleases. Should it find a partner along the way, the encounter will mark its journey's end.",
   },
   {
@@ -255,6 +263,7 @@ export const pals: IPal[] = [
       name: "Jolt Glider",
       description: "While in party, modifies the performance of the equipped glider. Prevents fall damage and extends the duration of high-speed gliding.",
     },
+    nocturnal: false,
     description: "Its flashy patterns help it attract a partner. But after a long history of electrocution incidents involving Celaray Lux, yellow-and-black stripes are now seen across the island as a sign of danger.",
   },
   {
@@ -279,6 +288,7 @@ export const pals: IPal[] = [
       name: "Fluffy Wool",
       description: "While in party, increases Attack of Neutral Pals by (15~30)%. (Does not stack) Sometimes drops Wool when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Compared to Lamball, it has finer wool and a temperament more suited for domestication. However, it has historically always been kept as a pet. Cuteness is considered a virtue.",
   },
   {
@@ -311,6 +321,7 @@ export const pals: IPal[] = [
       name: "Leap Stance",
       description: "When activated, Croajiro Noct channels its loyalty and puffs up its abdomen to store energy. Climbing on top will propel the player high into the air. While airborne before landing, the player's Attack is increased by (50~86)%.",
     },
+    nocturnal: false,
     description: "Those who disgrace the honor of the herd are forced to take their own life. By piercing their inflated vocal sac with a tree branch, they are blown away into the atmosphere and return to the afterlife.",
   },
   {
@@ -343,6 +354,7 @@ export const pals: IPal[] = [
       name: "Shadow Stance",
       description: "When activated, Croajiro Noct channels its loyalty and puffs up its abdomen to store energy. Climbing on top will propel the player high into the air. While in party, improves player's and Pals' Dark damage to enemy weak points by (25~40)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "The Croajiro who have forsaken their honor gather and form splinter groups. They will use any underhanded means to take down their chosen prey. If you encounter a pack of Croajiro Noct in the dead of the night, it's your life that's on the line.",
   },
   {
@@ -371,6 +383,7 @@ export const pals: IPal[] = [
       name: "Herbil Pulse",
       description: "While in party, Herbil uses its healing powers to restore (30~60)% of the player's Max Health when incapacitated.",
     },
+    nocturnal: false,
     description: "When in doubt, punch it till it works—that’s Herbil's approach to fixing things. With strength perfectly tuned for humans, sometimes just one punch is enough to restart a stopped heart.",
   },
   {
@@ -391,6 +404,7 @@ export const pals: IPal[] = [
       name: "Soothing Shower",
       description: "While in party, restores (20~40)% of the player's Health when Health falls below 30%. (Does not stack) (120-second cooldown after activation)",
     },
+    nocturnal: false,
     description: "Large amounts of water pour from what is thought to be its nose, though some say that it is, in fact, just snot. This has sparked a fierce debate among Pal scholars.",
   },
   {
@@ -411,6 +425,7 @@ export const pals: IPal[] = [
       name: "Logging Assistance",
       description: "While in party, improves logging efficiency by (30~50)% and reduces weight of all types of wood by (40~60)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "A strange Pal with a body resembling tree sap. It gradually loses strength if it has nothing to cover its body with, eventually rotting away.",
   },
   {
@@ -439,6 +454,7 @@ export const pals: IPal[] = [
       name: "Best Boy",
       description: "While in party, increases the player's melee weapon damage by (10~35)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Pupperai territorial disputes begin with a staredown and end in a single, quick strike. Training them to |stay| is risky business, as the |go| command triggers that same attack instinct.",
   },
   {
@@ -463,6 +479,7 @@ export const pals: IPal[] = [
       name: "Happy Clover",
       description: "While at a base, increases the Gathering Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "Some individuals once had three or more leaves on their foreheads. Regarded as symbols of good fortune, those with more leaves were heavily hunted, leading the species to evolve fewer leaves over time.",
   },
   {
@@ -483,6 +500,7 @@ export const pals: IPal[] = [
       name: "Jolt Bomb",
       description: "When activated, equips Jolthog to the player to be thrown at an enemy, causing an Electric explosion upon impact.",
     },
+    nocturnal: false,
     description: "It releases the electricity stored in its body when under attack. The voltage it generates exceeds 10 million volts, making it more lethal than any conventional heavy firearms when thrown.",
   },
   {
@@ -503,6 +521,7 @@ export const pals: IPal[] = [
       name: "Cold Bomb",
       description: "When activated, equips Jolthog Cryst to the player to be thrown at an enemy, causing an Ice explosion upon impact.",
     },
+    nocturnal: false,
     description: "It releases the cold air stored in its body when under attack. The frigid blast it radiates is cold enough to freeze the surrounding air and easily pierces through any attacker's body.",
   },
   {
@@ -535,6 +554,7 @@ export const pals: IPal[] = [
       name: "Caffeine Inoculation",
       description: "When activated, Depresso chugs an entire energy drink, increasing its Movement Speed and Work Speed by (100~900)%. Sometimes drops Venom Gland when assigned to Ranch.",
     },
+    nocturnal: true,
     description: "It has few friends because of the perpetually grouchy look on its face, but it is in fact kindhearted. Some have seen it feeding Vixy who have strayed from their pack.",
   },
   {
@@ -567,6 +587,7 @@ export const pals: IPal[] = [
       name: "Pengullet Launcher",
       description: "When activated, the player equips a Rocket Launcher to fire Pengullet as ammunition. Pengullet explodes on impact and is incapacitated.",
     },
+    nocturnal: false,
     description: "The feathers of this Pal have all but disappeared, but sadly, its desire to fly has remained as strong as ever. Even now, it tries to fly again in any way it can.",
   },
   {
@@ -599,6 +620,7 @@ export const pals: IPal[] = [
       name: "Pengullet Lux Launcher",
       description: "When activated, the player equips Pengullet Lux to fire Rocket Launcher as ammunition. Pengullet Lux explodes on impact and is incapacitated.",
     },
+    nocturnal: false,
     description: "The feathers of this Pal have all but disappeared, and it can no longer fly. Yet its longing for the sky has turned to jealousy— so it harnessed electricity to strike down those who still soar.",
   },
   {
@@ -635,6 +657,7 @@ export const pals: IPal[] = [
       name: "Brave Sailor",
       description: "While in party, Fire Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: false,
     description: "Surprisingly, it is unrelated to Pengullet. However, since this Pal gets pampered as it pleases, for now, it's doing its best to strut arrogantly.",
   },
   {
@@ -671,6 +694,7 @@ export const pals: IPal[] = [
       name: "Unyielding Storm Commander",
       description: "While in party, improves player's and Pals' Water damage to enemy weak points by (25~40)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its body changed color after gaining electricity to improve underwater hunting. As a result, it lost the affection of Pengullet— but strangely enough, it now has a loyal follower: Pengullet Lux.",
   },
   {
@@ -691,6 +715,7 @@ export const pals: IPal[] = [
       name: "Dark Knowledge",
       description: "While in party, increases Attack of Dark Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "Often lost in thought, it sometimes finds it difficult to sleep. |I think, therefore I am.|",
   },
   {
@@ -711,6 +736,7 @@ export const pals: IPal[] = [
       name: "Pacapaca Wool",
       description: "Can be ridden. While in party, increases Kingpaca's Defense and Movement Speed. Sometimes drops Wool when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Don't be fooled by this Pal's fluffy appearance. A hypersonic kick from one of its long legs may send you flying to the other side of the world.",
   },
   {
@@ -731,6 +757,7 @@ export const pals: IPal[] = [
       name: "King of Muscles",
       description: "Can be ridden. This Pal's Defense and Movement Speed increase by (5~14)% for each Melpaca in party.",
     },
+    nocturnal: false,
     description: "Melpaca serve this Pal. Contests between Kingpaca offer up their vassals as a wager. Those seen alone are losers of such contests.",
   },
   {
@@ -755,6 +782,7 @@ export const pals: IPal[] = [
       name: "Coldhearted King",
       description: "Can be ridden. This Pal's Defense and Movement Speed increase by (5~14)% for each Melpaca in party.",
     },
+    nocturnal: false,
     description: "With a heart of ice, this Pal is terrible at expressing its emotions. A solitary individual is pitiable, seen as too clumsy in the eyes of a Melpaca.",
   },
   {
@@ -783,6 +811,7 @@ export const pals: IPal[] = [
       name: "Dream Chaser",
       description: "While in party, appears near the player. Attacks hostile enemies with Dark magic bullets. These bullets will not reduce the target's Health below 1.",
     },
+    nocturnal: true,
     description: "It puts those it is interested in to sleep and shows them an endless stream of happy dreams. Those who fall under its spell are never to wake until death takes them.",
   },
   {
@@ -819,6 +848,7 @@ export const pals: IPal[] = [
       name: "Cheery Rifle",
       description: "When activated, Tanzee will mercilessly fire an assault rifle at nearby enemies for a limited time.",
     },
+    nocturnal: false,
     description: "Long ago, this Pal used long objects like tree branches as weapons. After coming into contact with humans, however, it found something slightly more effective: guns.",
   },
   {
@@ -851,6 +881,7 @@ export const pals: IPal[] = [
       name: "Chipper Chimp Gunfire",
       description: "When activated, Tanzee Ignis will mercilessly fire a Fire assault rifle at nearby enemies for a limited time.",
     },
+    nocturnal: false,
     description: "Its palms have evolved to handle burning objects without getting scorched. When its gun runs out of ammo, it may grab the heated barrel with its bare hands and use it to club its foes.",
   },
   {
@@ -871,6 +902,7 @@ export const pals: IPal[] = [
       name: "Kuudere",
       description: "When activated, detects the location of nearby Pal Effigies.",
     },
+    nocturnal: true,
     description: "If you find Nox hair in your bedding, you should leave it where it lays and leave immediately. Picking it up is a one-way-ticket to a never ending night.",
   },
   {
@@ -903,6 +935,7 @@ export const pals: IPal[] = [
       name: "Magma Tears",
       description: "While in party, recovers Health of the player and Party Pals by (0.1~0.5)% per second outside of combat. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "When it starts crying, this Pal produces magma in place of tears. The magma that pours out is absorbed back into its body, causing it to get hotter and hotter. The more it cries, the stronger it becomes.",
   },
   {
@@ -927,6 +960,7 @@ export const pals: IPal[] = [
       name: "Tiny Spark",
       description: "While in party, increases Defense of Fire Pals by (15~30)%. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Wild Rooby surprisingly never get sick. Eating one piece of charcoal a day, made by burning a branch, is the secret to its eternal health.",
   },
   {
@@ -951,6 +985,7 @@ export const pals: IPal[] = [
       name: "Gold Digger",
       description: "Sometimes digs up Gold Coin when assigned to Ranch.",
     },
+    nocturnal: true,
     description: "Its hard tail does not deteriorate even when cut off. Some believed these severed tails bring good luck, but for the innumerable Mau who were poached as a result, they were anything but.",
   },
   {
@@ -975,6 +1010,7 @@ export const pals: IPal[] = [
       name: "Icy Whispers",
       description: "Sometimes drops Ice Organ when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Its crystalline tail is beautiful, but shatters when this Pal dies. Some believe it is good luck to raise them, so Mau Cryst in captivity are treated with great care.",
   },
   {
@@ -995,6 +1031,7 @@ export const pals: IPal[] = [
       name: "Hard Head",
       description: "Can be ridden. While mounted, increases efficiency of destroying Stone by (500~2000)%.",
     },
+    nocturnal: false,
     description: "Being an extremely aggressive Pal, it often picks fights before gauging its opponents' strength. Though small, its powerful charge can even send boulders flying.",
   },
   {
@@ -1015,6 +1052,7 @@ export const pals: IPal[] = [
       name: "Huggy Fire",
       description: "When activated, equips to the player and transforms into a flamethrower.",
     },
+    nocturnal: false,
     description: "It is unskilled at controlling fire from the moment it is born and tends to choke on the flames it breathes unintentionally. Foxparks sneezes are one of the leading causes of forest fires.",
   },
   {
@@ -1035,6 +1073,7 @@ export const pals: IPal[] = [
       name: "Huggy Frost",
       description: "When activated, equips to the player and attacks using frigid air.",
     },
+    nocturnal: false,
     description: "It is unskilled at controlling cold air from the moment it is born and tends to choke on the frost it breathes unintentionally. When Foxparks Cryst catches a cold, its nasal discharge freezes, making it difficult to breathe and causing it to panic.",
   },
   {
@@ -1063,6 +1102,7 @@ export const pals: IPal[] = [
       name: "Fried Squid",
       description: "While in party, modifies the performance of the equipped glider. Enables gentle floating while gliding for an extended time.",
     },
+    nocturnal: true,
     description: "It wraps itself around an enemy's head, sucking out their insides. Pal mummies are occasionally found, but these are in fact Killamari victims.",
   },
   {
@@ -1091,6 +1131,7 @@ export const pals: IPal[] = [
       name: "Fried Killamari",
       description: "While in party, modifies the performance of the equipped glider. Enables gentle floating while gliding for an extended time.",
     },
+    nocturnal: false,
     description: "It sinks its fangs into the enemy’s neck, draining every last drop of blood. When two Killamari Primos latch onto each other, they become locked in a relentless struggle—each trying to suck the other dry until one withers away.",
   },
   {
@@ -1119,6 +1160,7 @@ export const pals: IPal[] = [
       name: "Mining Assistance",
       description: "While in party, improves player mining efficiency by (30~60)% and reduces Stone weight by (80~100)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its large claws boast of diamond-like hardness. However, sharpening these claws consumes most of its energy, leading it to sometimes spending entire days doing nothing else.",
   },
   {
@@ -1139,6 +1181,7 @@ export const pals: IPal[] = [
       name: "Guardian of the Forest",
       description: "Can be ridden. Can perform a double jump while mounted and increases lumbering efficiency by (220~500)%.",
     },
+    nocturnal: false,
     description: "The one who possesses the most impressive antlers becomes the leader of the herd. If their antlers are broken, they become depressed and leave the herd never to be seen again.",
   },
   {
@@ -1159,6 +1202,7 @@ export const pals: IPal[] = [
       name: "Guardian of the Golden Forest",
       description: "Can be ridden. Can perform a double jump while mounted. While at a base, increases the Lumbering Work Suitability Level for all other Base Pals by +1 (Does not stack)",
     },
+    nocturnal: false,
     description: "The individual with the hardest horns becomes the leader. Once the horns are lost, so too is its leadership status. It leaves the herd amidst farewell glances and quietly returns to the earth.",
   },
   {
@@ -1179,6 +1223,7 @@ export const pals: IPal[] = [
       name: "Direhowl Rider",
       description: "Can be ridden. Moves slightly faster than most mounts.",
     },
+    nocturnal: false,
     description: "Long ago Direhowl would hunt alongside humans but over the years this bond faded.",
   },
   {
@@ -1203,6 +1248,7 @@ export const pals: IPal[] = [
       name: "Berry Picker",
       description: "Sometimes drops Red Berries from its back when assigned to Ranch. While in party, restores (100~200) Pal’s Hunger to the Pal with the lowest Hunger every 5 minutes. (Does not stack)",
     },
+    nocturnal: false,
     description: "The shrub on this Pal's back produces berries as long as it is properly fed. It offers these berries to potential mates, and if the flavor is to their liking, romance blossoms.",
   },
   {
@@ -1227,6 +1273,7 @@ export const pals: IPal[] = [
       name: "Venom Picker",
       description: "Sometimes drops Venom Gland from its back when assigned to Ranch. While in party, restores (100~200) Pal’s Hunger to the Pal with the lowest Hunger every 5 minutes. (Does not stack)",
     },
+    nocturnal: true,
     description: "The berries that grow on its back change flavor according to its emotions. The harsher the environment it grows in, the sweeter the berries become. This is why most Caprity Noct raised in captivity have never known love.",
   },
   {
@@ -1251,6 +1298,7 @@ export const pals: IPal[] = [
       name: "Fluffy",
       description: "While in party, increases Attack and Defense of Sweepa.",
     },
+    nocturnal: false,
     description: "Crawling along the ground, it eats microscopic organic matter. After a while, it discharges any substances that provide no nutrition. By using it as a mop for cleaning, everyone wins!",
   },
   {
@@ -1275,6 +1323,7 @@ export const pals: IPal[] = [
       name: "King of Fluff",
       description: "Can be ridden. This Pal's Attack and Defense increase by (12~24)% for each Swee in party.",
     },
+    nocturnal: false,
     description: "While hibernating, a large number of Swee hide within its voluminous body hair. The most ever recorded is 101.",
   },
   {
@@ -1303,6 +1352,7 @@ export const pals: IPal[] = [
       name: "Spikey Carrier",
       description: "While in party, reduces Ore weight by (80~100)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "To protect its fragile body, it developed an incredibly tough shell. Unfortunately, it's utterly defenseless underneath. Even a little tickle could knock it out cold.",
   },
   {
@@ -1331,6 +1381,7 @@ export const pals: IPal[] = [
       name: "Shiny Hauler",
       description: "While in party, reduces weight of Sulfur and Coal by (80~100)%. Also improves player's and Pals' Ground damage to enemy weak points by (80~100)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "To protect its fragile body, it developed an incredibly tough shell. With most of its senses concentrated in its limbs and shell, it can’t even tell if someone quietly touches its core.",
   },
   {
@@ -1359,6 +1410,7 @@ export const pals: IPal[] = [
       name: "Flying Trapeze",
       description: "While in party, modifies the performance of the equipped glider. Enables slow ascension while gliding.",
     },
+    nocturnal: false,
     description: "Its gigantic arms can rip apart even iron. As a particularly cruel form of execution, serious criminals would be strung up in a public square, and a Hangyu would tear the skin right from their bones.",
   },
   {
@@ -1391,6 +1443,7 @@ export const pals: IPal[] = [
       name: "Winter Trapeze",
       description: "While in party, modifies the performance of the equipped glider. Enables slow ascension while gliding.",
     },
+    nocturnal: false,
     description: "Its gigantic arms can tear through blocks of ice. There were times when great sinners were tied in the town square and had their hair torn out by Hangyu Cryst as a brutal form of public humiliation.",
   },
   {
@@ -1411,6 +1464,7 @@ export const pals: IPal[] = [
       name: "Candy Pop",
       description: "Sometimes drops Cotton Candy when assigned to Ranch. While at a base, reduces Hunger depletion rate of Base Pals by (-10~-20)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its entire body is 18,000 times sweeter than sugar. Carnivorous Pals lured by its scent will find themselves overwhelmed by sweetness and even pass out should they take a bite of this Pal.",
   },
   {
@@ -1431,6 +1485,7 @@ export const pals: IPal[] = [
       name: "Bitter Pop",
       description: "Sometimes drops Caramel Cotton Candy when assigned to Ranch. While at a base, reduces Hunger depletion rate of Base Pals by (-15~-25)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its fur emits a sweet smell, but its meat is disgustingly bitter. Carnivorous Pals lured by its scent into taking a bite will find themselves overwhelmed by the foul taste and pass out.",
   },
   {
@@ -1451,6 +1506,7 @@ export const pals: IPal[] = [
       name: "Milk Maker",
       description: "Sometimes drops Milk when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Milk pours from this Pal like water from an open faucet, regardless of its gender. It's truly a mystery of life, although this mystery may be better left unsolved.",
   },
   {
@@ -1471,6 +1527,7 @@ export const pals: IPal[] = [
       name: "Waterwing Dance",
       description: "Can be ridden to travel on water. While mounted, changes the player's attack type to Water and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "This Pal's white ribbon turns black if doused with impure water. Given its usefulness in detecting poison, this Pal was once overhunted. This past has left them bitter towards humanity.",
   },
   {
@@ -1491,6 +1548,7 @@ export const pals: IPal[] = [
       name: "Icewing Dance",
       description: "Can be ridden to travel on water. While mounted, changes the player’s attack type to Ice and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "This Pal’s white ribbon continuously absorbs heat from its surroundings, yet its temperature remains curiously unchanged. This strange ability once made it a target of relentless hunting, leaving it with a deep mistrust of humans to this day.",
   },
   {
@@ -1523,6 +1581,7 @@ export const pals: IPal[] = [
       name: "Static Electricity",
       description: "While in party, increases Attack of Electric Pals by (15~30)%. (Does not stack) Sometimes drops Electric Organ when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "During the dry season, this Pal is always on the verge of blowing a fuse. Sparks can fly with even the slightest provocation, even amongst allies.",
   },
   {
@@ -1547,6 +1606,7 @@ export const pals: IPal[] = [
       name: "Aqua Spout",
       description: "While in party, increases Attack of Water Pals by (15~30)%. (Does not stack) Sometimes drops Aquatic Pal Fluids when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Its personality changes depending on the quality of the water it was born into. Kelpsea born into polluted waters are generally ill-tempered and quickly become delinquents.",
   },
   {
@@ -1571,6 +1631,7 @@ export const pals: IPal[] = [
       name: "Lava Spout",
       description: "While in party, increases Attack of Fire Pals by (15~30)%. (Does not stack) Sometimes drops Flame Organ when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Its personality changes depending on the temperature of the water it was born into. Kelpsea born in warm waters generally have a passionate, motivated personality.",
   },
   {
@@ -1599,6 +1660,7 @@ export const pals: IPal[] = [
       name: "Happy-Go-Lucky Bunny",
       description: "While in party, increases Attack of Neutral Pals by (15~30)%. (Does not stack) While at a base, increases the Handiwork Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "A Pal that's never without a bright smile. Occasionally, its tentacles get tied up in knots by Cattiva's pranks. During those moments, its expression turns demonic.",
   },
   {
@@ -1631,6 +1693,7 @@ export const pals: IPal[] = [
       name: "Ground 'n' Pound",
       description: "While in party, improves player's and Pals' Grass damage to enemy weak points by (25~40)%. (Does not stack) Increases efficiency by (200~400)% when working at a Weapon Workbench, Weapon Assembly Line, or other related facilities.",
     },
+    nocturnal: false,
     description: "Always wears a cheerful smile. Sometimes, thanks to Cattiva's pranks, they end up tangled in tentacles and have to fight their way out! Even in tough situations, they keep smiling cheerfully.",
   },
   {
@@ -1659,6 +1722,7 @@ export const pals: IPal[] = [
       name: "Jelliette Drop",
       description: "While in party, increases items obtained from fishing by (55~95)%. While Jelliette and Jellroy are in your base, Jelliette's watering speed increases by (50~120)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "A Pal that closely resembles Jellroy. It’s very social, so when plans overlap, it asks its good friend Jellroy to go in its place. As thanks, one date.",
   },
   {
@@ -1691,6 +1755,7 @@ export const pals: IPal[] = [
       name: "Jellroy Drop",
       description: "While in party, increases items obtained from salvaging by (55~95)%. While Jelliette and Jellroy are in your base, Jellroy's watering speed increases by (50~120)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "A Pal that closely resembles Jelliette. It sometimes appears as a substitute when Jelliette is unavailable. Its acting is so flawless that no one ever notices the switch.",
   },
   {
@@ -1719,6 +1784,7 @@ export const pals: IPal[] = [
       name: "Magical Twin Powers",
       description: "While at a base, increases the Watering Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "If one disappears, another simply shows up to take its place, and life goes on like nothing happened. For Amione, companionship is everything.",
   },
   {
@@ -1747,6 +1813,7 @@ export const pals: IPal[] = [
       name: "Sticky Princess",
       description: "While in party, the capture gauge decreases (12~35)% more slowly while the bars are not overlapping during the fishing minigame. (Does not stack)",
     },
+    nocturnal: true,
     description: "Be sure to check your plans for the next day before falling asleep with this Pal. Its suction cups leave marks that look suspiciously like hickeys. One sleepy cuddle session could lead to some truly awkward misunderstandings.",
   },
   {
@@ -1775,6 +1842,7 @@ export const pals: IPal[] = [
       name: "Cephalo-Princess",
       description: "While in party, increases Defense of Water Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Be sure to check your plans for the next day before falling asleep with this Pal. Its suction cups leave marks that look suspiciously like bite marks. One sleepy cuddle session could lead to some truly unnecessary concern.",
   },
   {
@@ -1795,6 +1863,7 @@ export const pals: IPal[] = [
       name: "Galeclaw Glider",
       description: "While in party, modifies the performance of the equipped glider. Enables high-speed gliding and allows shooting with the right hand.",
     },
+    nocturnal: false,
     description: "A Pal that can easily take flight even while grasping a human. It is, however, prone to letting go when tired, which has led to the sudden demise of more than a few souls.",
   },
   {
@@ -1827,6 +1896,7 @@ export const pals: IPal[] = [
       name: "Death-Cheating Feline",
       description: "While in party, increases the capture rate when awarded a back bonus. (Does not stack)",
     },
+    nocturnal: true,
     description: "The ghostly hands behind it embody the souls of all humans who have raised its kind. Lately, they seem to have reached a unanimous consensus to dote on Wispaw.",
   },
   {
@@ -1847,6 +1917,7 @@ export const pals: IPal[] = [
       name: "Travel Companion",
       description: "Can be ridden as a flying mount.",
     },
+    nocturnal: false,
     description: "It carries newborn Pals to its nest and raises them as a surrogate parent. Once the baby Pal has fattened up, it hunts them.",
   },
   {
@@ -1875,6 +1946,7 @@ export const pals: IPal[] = [
       name: "Ultrasonic Sensor",
       description: "When activated, uses ultrasonic waves to detect nearby dungeons, treasure chests, and scrap.",
     },
+    nocturnal: true,
     description: "Often appears out of the blue to flaunt its prized wings in front of other Pals. Although this appears to be an intimidation tactic, the Pal seems to derive some kind of pleasure from the display.",
   },
   {
@@ -1895,6 +1967,7 @@ export const pals: IPal[] = [
       name: "Eggbomb Launcher",
       description: "When activated, equips to the player and transforms into an egg launcher.",
     },
+    nocturnal: false,
     description: "A frightening Pal that produces exploding eggs. It often fires these eggs from its rear end as a form of defense, but when spent, the Pal itself explodes.",
   },
   {
@@ -1919,6 +1992,7 @@ export const pals: IPal[] = [
       name: "Swift Deity",
       description: "Can be ridden. While in party, improves player's and Pals' Electric damage to weak points by (25~40)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "It used to be considered an emissary of the Thunder God, and thus was not hunted by people. However, after witnesses observed one die from a lightning strike, its reverence faded, and it quite literally fell into the role of a workhorse.",
   },
   {
@@ -1943,6 +2017,7 @@ export const pals: IPal[] = [
       name: "Frigid Deity",
       description: "Can be ridden. While mounted, changes the player’s attack type to Ice and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "It used to be considered an emissary of the Winter God, and thus was not hunted by people. However, after witnesses observed one lose its footing on the ice, its reverence faded, and it quite literally slid into the role of a workhorse.",
   },
   {
@@ -1971,6 +2046,7 @@ export const pals: IPal[] = [
       name: "Angry Shark",
       description: "When activated, attacks targeted enemy with Aqua Gun. When this Pal uses Aqua Gun, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's Attack by (10~20)%.",
     },
+    nocturnal: false,
     description: "Long ago, it was a giant and powerful aquatic Pal. However, as food became scarce, it evolved to live on land. Since walking requires much energy, it gradually became smaller and is now a small and puny Pal.",
   },
   {
@@ -1999,6 +2075,7 @@ export const pals: IPal[] = [
       name: "Angry Shark",
       description: "When activated, attacks targeted enemy with Spirit Fire. When this Pal uses Spirit Fire, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's Attack by (10~20)%.",
     },
+    nocturnal: false,
     description: "Long ago, it was a giant and powerful aquatic Pal. However, as food became scarce, it evolved to live on land. Since walking burns many calories, it astonishingly awakened its power to control fire!",
   },
   {
@@ -2019,6 +2096,7 @@ export const pals: IPal[] = [
       name: "Dark Gleam Strike",
       description: "When activated, attacks targeted enemy with Jumping Claw. When this Pal uses Jumping Claw, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's melee weapon attack speed by (15~30)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "The horns on its head grow under the moonlight. It doesn't hate the sun, but its horns itch when sunlight hits them.",
   },
   {
@@ -2043,6 +2121,7 @@ export const pals: IPal[] = [
       name: "Frozen Gleam Strike",
       description: "When activated, attacks targeted enemy with Snow Claw. When this Pal uses Snow Claw, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's melee weapon attack speed by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "The horns on its head are made of a mysterious ice that never melts. Shaved ice made by breaking off a horn is truly exquisite, but both the one who tries it and Loupmoon Cryst end up with a headache.",
   },
   {
@@ -2067,6 +2146,7 @@ export const pals: IPal[] = [
       name: "Eerie Nightstreaker",
       description: "When activated, grants Night Vision to see in dark places. Activate again to turn off. Sometimes digs up Bone when assigned to Ranch.",
     },
+    nocturnal: true,
     description: "Long ago it freely soared the skies. After losing a contest with Galeclaw, it abandoned the skies, and now lives a secretive life in the dark of night.",
   },
   {
@@ -2091,6 +2171,7 @@ export const pals: IPal[] = [
       name: "Warm Body",
       description: "Can be ridden. While in party, the player gains Cold Resistance +2. (Does not stack)",
     },
+    nocturnal: false,
     description: "In ancient times, carnivorous Pals pursued them relentlessly. The absurd fury in the cries of Arsox transformed into a raging inferno, which has been passed on to this day.",
   },
   {
@@ -2115,6 +2196,7 @@ export const pals: IPal[] = [
       name: "Fluffy Flutterer",
       description: "While in party, increases the capture rate of Pals afflicted with Freeze. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its soft facial fluff softens any hit, but it cannot groom itself well nor scratch its itches, leaving it in a constant state of mild frustration.",
   },
   {
@@ -2151,6 +2233,7 @@ export const pals: IPal[] = [
       name: "Princess Gaze",
       description: "While in party, increases Attack of Grass Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "This prickly Pal's thorns are highly poisonous. It is friendly with Cinnamoth and only smiles while a Cinnamoth is drinking its nectar.",
   },
   {
@@ -2179,6 +2262,7 @@ export const pals: IPal[] = [
       name: "Mysterious Scales",
       description: "When activated, attacks the targeted enemy with Poison Fog. While at a base, increases the Farming Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "Sniffing its scales produces a feeling of unparalleled euphoria. There was some effort to further regulate this byproduct, but the Free Pal Alliance have vehemently opposed these measures, putting a stop to them.",
   },
   {
@@ -2203,6 +2287,7 @@ export const pals: IPal[] = [
       name: "Crackle Booster",
       description: "While at a base, increases the Generating Electricity Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its fluffy fur absorbs tremendous amounts of water when soaked. Shaking it dry releases a powerful electrical discharge, making bath time together a serious gamble.",
   },
   {
@@ -2223,6 +2308,7 @@ export const pals: IPal[] = [
       name: "Amicable Holy Dragon",
       description: "Can be ridden as a flying mount. While flying, Movement Speed is increased. While in party, Dark Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: false,
     description: "It possesses a demeanor as pure as its appearance suggests. Perhaps because of this, it is sometimes unable to discern good from evil, often allowing wrongdoers to take advantage of it.",
   },
   {
@@ -2247,6 +2333,7 @@ export const pals: IPal[] = [
       name: "Amicable Water Dragon",
       description: "Can be ridden as a flying mount. While flying, Movement Speed is increased. While in party, player and party Pals take (15~30)% less Fire damage and are immune to Burn. (Does not stack)",
     },
+    nocturnal: false,
     description: "It possesses a demeanor as pure as its appearance suggests. Perhaps because of this, it harbors no ill will in any of its actions and is indifferent even after killing someone.",
   },
   {
@@ -2271,6 +2358,7 @@ export const pals: IPal[] = [
       name: "Aerial Marauder",
       description: "Can be ridden as a flying mount. While in party, increases damage player deals to enemy weak points by (20~40)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "The melodies of a flute made from the exoskeleton of a Vanwyrm are said to cross whole mountain ranges. In ages past, such flutes were used to signal an attack.",
   },
   {
@@ -2295,6 +2383,7 @@ export const pals: IPal[] = [
       name: "Aerial Marauder",
       description: "Can be ridden as a flying mount. While in party, increases damage player deals to enemy weak points by (30~50)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "The melodies of a flute made from the exoskeleton of a Vanwyrm Cryst are said to cross whole mountain ranges. In ages past, such flutes were used to signal victory in battle.",
   },
   {
@@ -2315,6 +2404,7 @@ export const pals: IPal[] = [
       name: "Life Steal",
       description: "While fighting together, grants the player and Felbat a life steal effect that restores (5~9)% of damage dealt as Health.",
     },
+    nocturnal: true,
     description: "Attacking from the shadows, this Pal traps its prey within its cloak-like wings. It's probably best not to know what happens within them, or why the inside of its wings are stained red.",
   },
   {
@@ -2355,6 +2445,7 @@ export const pals: IPal[] = [
       name: "Purification of Gaia",
       description: "While in party, Ground Pals drop (40~80)% more items when defeated. (Does not stack) Sometimes drops various seeds when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "The castle was filled with the king's favorite flowers. A great battle ensued, and flames approached the castle. Amidst the chaos, the spirit of a flower appeared. - From the fairy tale, |The King's Flower.|",
   },
   {
@@ -2399,6 +2490,7 @@ export const pals: IPal[] = [
       name: "Worker Bee",
       description: "While in party, increases Elizabee's Attack. Sometimes drops Honey when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "A servant that pledges loyalty to Elizabee. Any that cause harm to the queen are immediately expelled from the hive. It will gladly give its life to protect its queen.",
   },
   {
@@ -2435,6 +2527,7 @@ export const pals: IPal[] = [
       name: "Queen Bee Command",
       description: "This Pal's Attack increases by (12~24)% for each Beegarde in party.",
     },
+    nocturnal: false,
     description: "A chosen queen to rule over Beegardes. There is a never ending stream of servants willing to work themselves to death for the pleasure of serving their queen.",
   },
   {
@@ -2467,6 +2560,7 @@ export const pals: IPal[] = [
       name: "Heart Drain",
       description: "While fighting together, grants the player and Lovander a life steal effect that restores (5~9)% of damage dealt as Health.",
     },
+    nocturnal: true,
     description: "Seeking a night of love, it is always chasing someone around. At first it only showed interest in other Pals, but in recent years even humans have become the target of its debauchery.",
   },
   {
@@ -2487,6 +2581,7 @@ export const pals: IPal[] = [
       name: "Glaring Cat's Eye",
       description: "Can be ridden. While in party, picking up a Pal Egg has a (50~75)% chance of receiving one extra. (Does not stack)",
     },
+    nocturnal: false,
     description: "Grintale's eyes light up the moment anyone enters its territory. This is no figure of speech—its eyes literally light up.",
   },
   {
@@ -2519,6 +2614,7 @@ export const pals: IPal[] = [
       name: "Tarantriss’ Web",
       description: "Can be ridden. Can double jump while mounted. Additionally, can shoot spider web to grapple and move at high speed.",
     },
+    nocturnal: true,
     description: "Extremely sticky and clingy. The more it's resisted, the more tenacious it becomes. Such is its |personality.|",
   },
   {
@@ -2543,6 +2639,7 @@ export const pals: IPal[] = [
       name: "Rider of the Snowy Mountain",
       description: "Can be ridden. Movement Speed is increased by (80~160)% while mounted on snow. Can also slide quickly down slopes.",
     },
+    nocturnal: false,
     description: "Among Polapups, the fastest slider on the snow earns the highest respect. Sometimes, a too-forceful leap sends one tumbling from the sky— a common sight during territorial season. Forecast: clear skies with a chance of flying Polapups.",
   },
   {
@@ -2567,6 +2664,7 @@ export const pals: IPal[] = [
       name: "Snowy Mountain Slider",
       description: "Can be ridden. Movement Speed is increased by (80~160)% while mounted on snow. Can also slide quickly down slopes. While it starts out slow, the top speed it can hit while sliding is no joke.",
     },
+    nocturnal: false,
     description: "Among Polapup Terras, the fastest slider on the snow earns the highest respect. Sometimes, a too-forceful leap leaves one buried in the snow— a common sight during particularly competitive seasons. Traffic forecast: heavy Polapup Terra congestion.",
   },
   {
@@ -2595,6 +2693,7 @@ export const pals: IPal[] = [
       name: "Too Cool to be Seen",
       description: "When activated, Leezpunk and the player become invisible, making them undetectable to enemies for (10~20) seconds.",
     },
+    nocturnal: true,
     description: "A Pal that always takes great care to maintain a stylish stance. Always on the hunt for the coolest poses, if given a mirror it will spend all day posing in front of it.",
   },
   {
@@ -2627,6 +2726,7 @@ export const pals: IPal[] = [
       name: "Too Cool to be Seen",
       description: "When activated, Leezpunk Ignis and the player become invisible, making them undetectable to enemies for (10~20) seconds.",
     },
+    nocturnal: false,
     description: "A Pal that has an unusual obsession with their standing posture. Always in search of the hottest pose, this Pal's owner is constantly presented with fervent stances.",
   },
   {
@@ -2655,6 +2755,7 @@ export const pals: IPal[] = [
       name: "Full-Power Gorilla Mode",
       description: "When activated, unleashes a primal fury that increases Gorirat's Attack by (75~300)% for a limited time.",
     },
+    nocturnal: false,
     description: "It beats the ground rhythmically to communicate with its comrades. The meaning of each rhythm differs by troop, but the distinction between them is still largely unknown.",
   },
   {
@@ -2683,6 +2784,7 @@ export const pals: IPal[] = [
       name: "Full-Power Gorilla Pound",
       description: "While in party, increases the player's climbing speed by (50~100)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "It beats the ground rhythmically to communicate with its comrades. Stronger than Gorirat, if every Gorirat Terra hit the ground at the same time, the island would sink in 1 second.",
   },
   {
@@ -2707,6 +2809,7 @@ export const pals: IPal[] = [
       name: "Swift Swimmer",
       description: "Can be ridden to travel on water. Sometimes drops Leather when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Its hydrodynamic form is well suited for activities on water. Poachers often catch them and use them in place of surfboards.",
   },
   {
@@ -2727,6 +2830,7 @@ export const pals: IPal[] = [
       name: "Sand Swimmer",
       description: "Can be ridden. While in party, the player's attacks inflict Muddy (2~6). (Does not stack)",
     },
+    nocturnal: false,
     description: "Its aerodynamic form is well suited for activities on sand. Poachers often catch them and use them in place of surfboards.",
   },
   {
@@ -2767,6 +2871,7 @@ export const pals: IPal[] = [
       name: "Grounded Archer",
       description: "While in party, increases the player's bow damage by (10~35)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "A Pal that is very similar to humans who hunt and live in the forests. It may prove to be a key for understanding what Pals are and how they diverged from humans in the distant past.",
   },
   {
@@ -2803,6 +2908,7 @@ export const pals: IPal[] = [
       name: "Master Archer",
       description: "While in party, increases the player's bow charge speed by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "A Pal that is very similar to humans who hunt and live in the rocky areas. When Robinquill Terra bones are found in ruins, there are always human bones found nearby as well.",
   },
   {
@@ -2839,6 +2945,7 @@ export const pals: IPal[] = [
       name: "Helper Bunny",
       description: "While in party, appears near the player. Automatically picks up nearby items.",
     },
+    nocturnal: false,
     description: "It prefers places that have an abundance of vegetation, but hay fever has apparently become a problem for Flopie as of late.",
   },
   {
@@ -2867,6 +2974,7 @@ export const pals: IPal[] = [
       name: "Lord Fox",
       description: "When activated, Wixen changes the player's attack type to Fire and increases Attack by (30~50)%.",
     },
+    nocturnal: false,
     description: "With the power of light, it produces arcane phenomena. It prefers to eat food well-done and is particularly hostile towards Katress.",
   },
   {
@@ -2895,6 +3003,7 @@ export const pals: IPal[] = [
       name: "Black Fox Lord",
       description: "When activated, Wixen Noct changes the player's attack type to Dark and increases Attack by (30~50)%.",
     },
+    nocturnal: true,
     description: "Due to its upbringing, it no longer cares about whether its food is cooked enough. This Pal stopped worrying about those details, and just prefers its food to be as sweet as possible. Not on good terms with Katress Ignis.",
   },
   {
@@ -2923,6 +3032,7 @@ export const pals: IPal[] = [
       name: "Mystical Black Magic",
       description: "While in party, Neutral Pals drop (40~80)% more items when defeated. Also has a (10~50)% chance to prevent Pal Sphere consumption when thrown. (Does not stack)",
     },
+    nocturnal: true,
     description: "With the power of shadows, it produces arcane phenomena. It prefers to eat food raw and is particularly hostile towards Wixen.",
   },
   {
@@ -2955,6 +3065,7 @@ export const pals: IPal[] = [
       name: "Blazing Black Magic",
       description: "While at a base, increases the Kindling Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: true,
     description: "Due to its upbringing, it no longer cares about whether its food is raw enough. This Pal stopped worrying about those details, and just prefers its food to be as spicy as possible. Not on good terms with Wixen Noct.",
   },
   {
@@ -2975,6 +3086,7 @@ export const pals: IPal[] = [
       name: "Wings of Death",
       description: "Can be ridden as a flying mount. While mounted, changes the player’s attack type to Dark and increases Attack by (5~20)%.",
     },
+    nocturnal: true,
     description: "It calls forth lightning from the depths of hell. Those who dies from Helzephyr's lightning are sure to have their soul sent to the underworld.",
   },
   {
@@ -2999,6 +3111,7 @@ export const pals: IPal[] = [
       name: "Wings of Thunder",
       description: "Can be ridden as a flying mount. While mounted, changes the player’s attack type to Electric and increases Attack by (5~20)%.",
     },
+    nocturnal: true,
     description: "It calls forth lightning from the depths of hell. While considered a subspecies of Helzephyr, there's a theory that suggests Helzephyr Lux, struck by lightning from hell, will transform into Helzephyr.",
   },
   {
@@ -3035,6 +3148,7 @@ export const pals: IPal[] = [
       name: "Mother Nature's Menace",
       description: "When activated, Elgrove changes the player's attack type to Grass and increases Attack by (30~50)%.",
     },
+    nocturnal: false,
     description: "The leaf on its horn cannot be removed, no matter how hard it is pulled. When the leaf falls on its own, Elgrove accepts its time has come.",
   },
   {
@@ -3067,6 +3181,7 @@ export const pals: IPal[] = [
       name: "Father Winter's Threat",
       description: "While in party, grants the player the ability to Freeze enemies afflicted with Soak in one strike.",
     },
+    nocturnal: false,
     description: "Its frozen horn stays solid through its life. When water begins to drip from this ice, Elgrove Cryst feels the chill of its own life slipping away.",
   },
   {
@@ -3095,6 +3210,7 @@ export const pals: IPal[] = [
       name: "Antigravity",
       description: "While in party, spheres home in on Pals, and carrying capacity increases by (300~600). (Does not stack)",
     },
+    nocturnal: false,
     description: "It can control those who carelessly stare into its eyes. Those seen with a Lunaris are in its mind, simply under its control.",
   },
   {
@@ -3115,6 +3231,7 @@ export const pals: IPal[] = [
       name: "Wind and Clouds",
       description: "Can be ridden. Can double jump while mounted.",
     },
+    nocturnal: false,
     description: "In ages past, its beautiful visage was a common sight in paintings. As time passed, its beautiful pelt and antlers were often seen in works of art.",
   },
   {
@@ -3139,6 +3256,7 @@ export const pals: IPal[] = [
       name: "Stormcloud",
       description: "Can be ridden. Can double jump while mounted. While in party, Water Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: false,
     description: "In ages past, it was believed that drawing a picture of Fenglope Lux would result in being struck down by lightning. As time passes, artworks depicting Fenglope Lux became revered as charms to ward off lightning, making them a common presence.",
   },
   {
@@ -3163,6 +3281,7 @@ export const pals: IPal[] = [
       name: "Fragrant Dragon",
       description: "Can be ridden. While in party, increase Defense of Dragon Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "A Pal who once angered cannot be pacified. It rages on and on like an inferno. The phrase |step on a Dinossom's tail| has come to mean enraging someone.",
   },
   {
@@ -3187,6 +3306,7 @@ export const pals: IPal[] = [
       name: "Thunder Dragon",
       description: "Can be ridden. While in party, increases Defense of Electric Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Though struck by lightning, it lives on. The phrase |struck by a Dinossom Lux's bolt| has come to mean narrowly escaping death.",
   },
   {
@@ -3223,6 +3343,7 @@ export const pals: IPal[] = [
       name: "Brandish Blade",
       description: "When activated, attacks targeted enemy with Iaigiri. When this Pal uses Iaigiri, it has a x(1.1~2.5) damage multiplier.",
     },
+    nocturnal: false,
     description: "Its body becomes a blade upon death, to be taken up by the next generation. If someone other than a Bushi wields this blade, the soul within torments them until they are driven mad.",
   },
   {
@@ -3259,6 +3380,7 @@ export const pals: IPal[] = [
       name: "Void Blade",
       description: "When activated, attacks targeted enemy with Iaigiri. When this Pal uses Iaigiri, it has a x(1.1~2.5) damage multiplier. While in party, increases the player's melee weapon damage by (30~65)% but only when not in combat. (Does not stack)",
     },
+    nocturnal: true,
     description: "Its body becomes a blade upon death, to be taken up by the next generation. If the Bushi who inherits it has a weak heart, the voices of the dead will drive it mad. The madness turns it into Bushi Noct that endlessly wanders.",
   },
   {
@@ -3287,6 +3409,7 @@ export const pals: IPal[] = [
       name: "Icy Maw",
       description: "While in party, reduces the weight of ingredient and food by (30~60)%. When paired with another Ice Pal, their Rot Speed also reduces by (-30~-80)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "The inside of its mouth stays pleasantly cold, making it a natural fridge when closed. Its saliva contains enzymes that prevent food from rotting. Thus, it can serve as a food locker for humans— whether it is sanitary or not is another matter entirely.",
   },
   {
@@ -3315,6 +3438,7 @@ export const pals: IPal[] = [
       name: "Gaia Crusher",
       description: "Can be ridden. While mounted, increases logging efficiency by (220~500)% and mining efficiency by (500~2000)%.",
     },
+    nocturnal: false,
     description: "The vegetation on its back varies between individuals. There is a long history of appreciating this veritable garden of a Pal, and there are even Mammorest pruning specialists.",
   },
   {
@@ -3343,6 +3467,7 @@ export const pals: IPal[] = [
       name: "Ice Crusher",
       description: "Can be ridden. While mounted, increases logging efficiency by (220~500)% and mining efficiency by (500~2000)%.",
     },
+    nocturnal: false,
     description: "The vegetation on its back varies between individuals. There was a time when seeds of presumed extinct plants were found still frozen on the back of a Mammorest Cryst.",
   },
   {
@@ -3367,6 +3492,7 @@ export const pals: IPal[] = [
       name: "Water Gun",
       description: "When activated, Finsider changes the player's attack type to Water and increases Attack by (30~50)%.",
     },
+    nocturnal: false,
     description: "It looks like something is peeking out from inside a costume, but even if you reach inside, there’s nothing there. In fact, you can keep reaching deeper and deeper. Perhaps the universe itself lies within.",
   },
   {
@@ -3395,6 +3521,7 @@ export const pals: IPal[] = [
       name: "Ember Chamber",
       description: "While in party, Finsider Ignis helps carry supplies, reducing the weight of weapons in your inventory by (60~100)%. Also improves player's and Pals' Fire damage to enemy weak points by (25~40)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Even if you reach into its mouth, there’s nothing inside—it just keeps going. Thinking it might be an interdimensional space, one researcher tried climbing in like a sleeping bag. But when the gag reflex kicked in, they realized... it’s definitely part of the creature’s body.",
   },
   {
@@ -3431,6 +3558,7 @@ export const pals: IPal[] = [
       name: "Blessing of the Flower Spirit",
       description: "When activated, soothing blossoms restore the player's Health by (75~85)%. While at a base, increases the Planting Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "A Pal that transforms into a massive plant when at the end of its life. Once every ten years, a beautiful flower blooms and a new Petallia is born.",
   },
   {
@@ -3467,6 +3595,7 @@ export const pals: IPal[] = [
       name: "Passion of the Flower Spirit",
       description: "When activated, soothing blossoms restore the player's Health by (80~90)%. While in party, player and party Pals take (15~30)% less Grass damage, and are immune to Ivy-Covered. (Does not stack)",
     },
+    nocturnal: false,
     description: "A Pal that burns away into a pile of ash upon the end of its life. The surrounding soil becomes incredibly fertile, allowing an abundance of vegetation to thrive for the following decade.",
   },
   {
@@ -3499,6 +3628,7 @@ export const pals: IPal[] = [
       name: "Selfless Discipline",
       description: "This Pal's Attack and Defense increase by (2~6)% for each other Grass Pal in your party.",
     },
+    nocturnal: false,
     description: "To hone the martial art passed down through a single bloodline: Daily training is the only way! Being distracted by romance? Unthinkable! Daily discipline is the only way! The time has come! Shoot my shot! Instant rejection, that’s all there is! The techniques of love were never passed down... Lingering regret, that’s all there is!",
   },
   {
@@ -3531,6 +3661,7 @@ export const pals: IPal[] = [
       name: "Flameclaw Hunter",
       description: "When activated, attacks the targeted enemy with Hellfire Claw. When this Pal uses Hellfire Claw, it has a x(1.1~2.5) damage multiplier.",
     },
+    nocturnal: true,
     description: "In the dark of night, this Pal snatches prey to bring back to its territory. What happens to those poor souls afterwards isn't too hard to imagine.",
   },
   {
@@ -3559,6 +3690,7 @@ export const pals: IPal[] = [
       name: "Darkclaw Hunter",
       description: "When activated, attacks the targeted enemy with Nightmare Claw. When this Pal uses Nightmare Claw, it has a x(1.1~2.5) damage multiplier.",
     },
+    nocturnal: true,
     description: "It specifically targets baby Pals, taking them back to its domain. One can only imagine the profound despair of a parent whose child has been taken away.",
   },
   {
@@ -3587,6 +3719,7 @@ export const pals: IPal[] = [
       name: "Lady of Lightning",
       description: "While in party, appears near the player. Attacks hostile enemies with Electric bolts. These bolts will not reduce the target's Health below 1.",
     },
+    nocturnal: false,
     description: "Often kind to lonely Pals. However, the moment a Pal mistakes this for actual friendship, it seizes the opportunity to blast them with a thunderbolt.",
   },
   {
@@ -3619,6 +3752,7 @@ export const pals: IPal[] = [
       name: "Lady of Dark Lightning",
       description: "While in party, appears near the player. Attacks hostile enemies with Dark bolts. These bolts will not reduce the target's Health below 1.",
     },
+    nocturnal: true,
     description: "Often kind to lonely Pals, it plots to lure them into dropping their guard before striking them down. Yet, unable to find the right moment, it ends up making friends with them instead.",
   },
   {
@@ -3643,6 +3777,7 @@ export const pals: IPal[] = [
       name: "Red Hare",
       description: "Can be ridden. While mounted, changes the player’s attack type to Fire and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "Its entire body has evolved into a highly efficient radiator, gifting it with astounding stamina. If someone rides it, this Pal takes caution not to burn them.",
   },
   {
@@ -3667,6 +3802,7 @@ export const pals: IPal[] = [
       name: "Black Hare",
       description: "Can be ridden. While mounted, changes the player’s attack type toDark and increases Attack by (5~20)%.",
     },
+    nocturnal: true,
     description: "It burns mysterious dark matter as energy and expels the remaining particles from its body. If someone rides it, they should take care so as not to gallop down the path of darkness.",
   },
   {
@@ -3691,6 +3827,7 @@ export const pals: IPal[] = [
       name: "Hungry Missile",
       description: "Can be ridden. Can rapidly fire a missile launcher while mounted.",
     },
+    nocturnal: false,
     description: "Contrary to its blasé appearance, it's quite ferocious. It perceives everything in its sight as prey and will stop at nothing to devour it.",
   },
   {
@@ -3715,6 +3852,7 @@ export const pals: IPal[] = [
       name: "Missile Party",
       description: "Can be ridden. Can rapidly fire a missile launcher while mounted.",
     },
+    nocturnal: false,
     description: "One day, Relaxaurus had an idea. Maybe it was about time for a change. Just then, an electric shock raced through its body!",
   },
   {
@@ -3739,6 +3877,7 @@ export const pals: IPal[] = [
       name: "Aurora Guide",
       description: "While in party, increases Attack of Ice Pals by (15~30)%. (Does not stack) Sometimes drops Ice Organ when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "On nights when the aurora is visible, it looks up towards the sky and begins to howl a beautiful song. This does, however, leave it vulnerable to attacks from enemies.",
   },
   {
@@ -3767,6 +3906,7 @@ export const pals: IPal[] = [
       name: "Thunderous",
       description: "Can be ridden as a flying mount. While mounted, changes the player's attack type to Electric and increases Attack by (5~20)%. This Pal’s Movement Speed increases by (5~25)% for each other Electric Pal in your party. (Excluding Beakon)",
     },
+    nocturnal: false,
     description: "Some think it is a related species to Ragnahawk, but there is in fact no connection. Using its sharp beak, it descends on its prey in a quick motion that resembles a bolt of lightning.",
   },
   {
@@ -3795,6 +3935,7 @@ export const pals: IPal[] = [
       name: "Coldsnap",
       description: "Can be ridden as a flying mount. While mounted, changes the player's attack type to Ice and increases Attack by (5~20)%. This Pal’s Movement Speed increases by (5~25)% for each other Ice Pal in your party. (Excluding Beakon Cryst)",
     },
+    nocturnal: false,
     description: "Perfectly adapted to colder environments, it hardly feels the cold despite its slender form. Its diving plunge carries tremendous force, as if a giant icicle were dropping straight from the sky.",
   },
   {
@@ -3819,6 +3960,7 @@ export const pals: IPal[] = [
       name: "Master of Darkness",
       description: "Can be ridden to travel on water. This Pal’s Movement Speed increases by (5~25)% for each other Dark or Water Pal in your party. (Excluding Ghangler)",
     },
+    nocturnal: true,
     description: "With its shining lure, it illuminates the darkness. The wandering Pals drawn in by the light stand no chance of escape once spotted by Ghangler. No matter how far, it will keep guiding them until they get home safe and sound.",
   },
   {
@@ -3847,6 +3989,7 @@ export const pals: IPal[] = [
       name: "Abyssal Celebrity Chef",
       description: "Can be ridden to travel on water. This Pal’s Movement Speed increases by (5~25)% for each other Fire or Water Pal in your party. (Excluding Ghangler Ignis)",
     },
+    nocturnal: false,
     description: "Its blazing lure doubles as a grill for roasting prey. Drawn in by the delicious aroma, Pals have no hope of escape once Ghangler Ignis sets its sights on them. In the end, they’re treated to a hearty meal—until everyone’s full.",
   },
   {
@@ -3867,6 +4010,7 @@ export const pals: IPal[] = [
       name: "Lightning Shepherd",
       description: "Can be ridden. Can perform a double jump while mounted. This Pal’s Movement Speed increases by (5~25)% for each other Electric Pal in your party. (Excluding Rayhound)",
     },
+    nocturnal: false,
     description: "At full speed, it could be mistaken for a bolt of lightning. When two Rayhounds collide, a thunderous roar echoes through the air.",
   },
   {
@@ -3887,6 +4031,7 @@ export const pals: IPal[] = [
       name: "Snow Shepherd",
       description: "Can be ridden. Can perform a double jump while mounted. While in party, increases Defense of Ice Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Sprinting across the tundra at full speed kicks up a blinding blizzard, leading to constant Rayhound Cryst collisions due to zero visibility.",
   },
   {
@@ -3911,6 +4056,7 @@ export const pals: IPal[] = [
       name: "Steel Scorpion",
       description: "While in party, player's Defense increases by (5~10)%, and Electric Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: true,
     description: "Being made of pure energy, its insides are completely hollow. This Pal crams still-living prey into its hollow body, where it absorbs them. Hellish screams of pain can often be heard coming from inside this Pal.",
   },
   {
@@ -3935,6 +4081,7 @@ export const pals: IPal[] = [
       name: "Golden Scorpion",
       description: "While in party, player's Defense increases by (5~10)%, and Electric Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: false,
     description: "Being made of pure energy, its insides are completely hollow. It stuffs earth and minerals into its outer shell, achieving overwhelming mass. Those who are struck by it can only let out hellish groans.",
   },
   {
@@ -3963,6 +4110,7 @@ export const pals: IPal[] = [
       name: "Hug Me Please",
       description: "While in party, increases player's and Pals' damage to enemies afflicted with Ivy-Covered by (50~65)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its spikes react to its emotions. A dearly cherished Needoll is something one may instinctively want to embrace. But more often than not, it ends in a tragic accident.",
   },
   {
@@ -3991,6 +4139,7 @@ export const pals: IPal[] = [
       name: "Hug You So Much",
       description: "While in party, the player's attacks inflict Ivy-Covered (2~6). (Does not stack)",
     },
+    nocturnal: true,
     description: "Its spikes react to its emotions. A well-loved Needoll Noct clings to its owner, but accepting that love means accepting the pain too.",
   },
   {
@@ -4015,6 +4164,7 @@ export const pals: IPal[] = [
       name: "Cool Body",
       description: "Can be ridden. While in party, the player gains Heat Resistance +2. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its transparent cerulean antlers glow with the cold of absolute zero. Any who touch them with their bare hands are instantly frozen and smashed to pieces.",
   },
   {
@@ -4047,6 +4197,7 @@ export const pals: IPal[] = [
       name: "Grenadier Panda",
       description: "Can be ridden. Can rapidly fire a grenade launcher while mounted.",
     },
+    nocturnal: false,
     description: "A Pal so powerful it's hard to believe. In one experiment, this Pal tore through 3,000 sheets of paper at once! It's only by some miracle that this Pal isn't a meat-eater.",
   },
   {
@@ -4079,6 +4230,7 @@ export const pals: IPal[] = [
       name: "Grenadier Panda",
       description: "Can be ridden. Can rapidly fire a grenade launcher while mounted.",
     },
+    nocturnal: false,
     description: "A Pal whose power is truly shocking. By altering the electrical currents in its body, this Pal's been able to overload its own strength. When it comes to sheer power, this Pal may be top of the list.",
   },
   {
@@ -4103,6 +4255,7 @@ export const pals: IPal[] = [
       name: "Wriggling Weasel",
       description: "Can be ridden. While mounted, changes the player’s attack type to Dragon and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "It can curl up its body and roll around at extremely high speeds. Long ago, people would tie bags of milk to domesticated Chillet as they grazed to produce butter using this spinning force.",
   },
   {
@@ -4127,6 +4280,7 @@ export const pals: IPal[] = [
       name: "Sparkling Weasel",
       description: "Can be ridden. While mounted, changes the player’s attack type to Fire and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "It can curl up its body and roll around so fast that sparks fly. Sparks also fly when it feels excited. If you stroke it too much, this pal will get fired up, literally!",
   },
   {
@@ -4151,6 +4305,7 @@ export const pals: IPal[] = [
       name: "Flame Wing",
       description: "Can be ridden as a flying mount. While mounted, changes the player’s attack type to Fire and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "Some think it is a related species to Beakon, but there is in fact no connection. It mainly eats rocks, and after many long years its beak and head have hardened to accommodate this diet.",
   },
   {
@@ -4175,6 +4330,7 @@ export const pals: IPal[] = [
       name: "Magma Overload",
       description: "Can be ridden as a mount. This Pal's Attack increases by (4~8)% for each other Fire or Ground Pal in your party.",
     },
+    nocturnal: false,
     description: "In a healthy individual, the lava on its back flows smoothly. However, a poor lifestyle will gradually worsen its circulation, eventually causing a lava clog that results in a sudden, massive explosion.",
   },
   {
@@ -4199,6 +4355,7 @@ export const pals: IPal[] = [
       name: "Ice Overload",
       description: "Can be ridden. While in party, improves player's and Pals' Ice damage to enemy weak points by (25~40)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "In a healthy individual, the substance flowing along its back maintains a stable temperature. However, if its heartbeat quickens, the temperature destabilizes, eventually triggering vaporization or crystallization that results in a sudden, abrupt death from shock.",
   },
   {
@@ -4227,6 +4384,7 @@ export const pals: IPal[] = [
       name: "Samba Step",
       description: "Can be ridden. Movement Speed is increased by (155~240)% while mounted on grass.",
     },
+    nocturnal: false,
     description: "Disrupts enemies’ rhythm with a signature dance. In turf battles, the first to fall in sync with the other’s rhythm loses. Courtship, boredom, battle—it all comes down to dance! Now then, what could a dance aimed at a human possibly mean?",
   },
   {
@@ -4247,6 +4405,7 @@ export const pals: IPal[] = [
       name: "Drill Crusher",
       description: "When activated, enters the Shell Spin state. Follows the player while spinning, increasing ore mining efficiency by (800~2000)%.",
     },
+    nocturnal: false,
     description: "A Digtoise possessing the strongest shell and the only drill capable of piercing it, ponders the contradictions of the world in the popular children's tale, |Digtoise's Fable|.",
   },
   {
@@ -4267,6 +4426,7 @@ export const pals: IPal[] = [
       name: "Love's First Blossom",
       description: "Can be ridden. While in party, Pal Eggs you pick up have a (35~45)% chance of becoming an Alpha Pal Egg. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its scent drastically changes before and after pairing. It exudes a pleasing aroma after finding a partner, which is called the |Fragrance of First Love.|",
   },
   {
@@ -4287,6 +4447,7 @@ export const pals: IPal[] = [
       name: "Purity's Full Bloom",
       description: "Can be ridden. While in party, Pal Eggs you pick up have a (45~55)% chance of becoming an Alpha Pal Egg. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its scent drastically changes before and after pairing. It exudes a pleasing aroma before finding a partner, which is called the |Perfume of Purity.|",
   },
   {
@@ -4319,6 +4480,7 @@ export const pals: IPal[] = [
       name: "Soil Improver",
       description: "While in party, increases Attack of Ground Pals by (15~30)%. (Does not stack) Sometimes drops High Quality Pal Oil when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "When too relaxed, its reaction time drastically declines. Even if it were sliced from head to tail, it probably wouldn't even realize that it should be dead until the next morning.",
   },
   {
@@ -4351,6 +4513,7 @@ export const pals: IPal[] = [
       name: "Golden Harvest",
       description: "While in party, increases amount of Gold Coin dropped by enemies by +(100~200)%. Sometimes drops High Quality Pal Oil when assigned to Ranch, with a small chance to drop Gold Coin. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its body reflects light with astounding clarity. Even more shocking, its reflexes are somehow even slower than Dumud.",
   },
   {
@@ -4379,6 +4542,7 @@ export const pals: IPal[] = [
       name: "Balmy Weather",
       description: "Can be ridden. While in your base, increases the egg production speed of Pals assigned to Breeding Farm by (20~50)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its breath carries a miraculous, pollen-like substance that pollinates any plant it touches. For plant-based Pals, being near it can be a bit… complicated.",
   },
   {
@@ -4399,6 +4563,7 @@ export const pals: IPal[] = [
       name: "Wolf of the Sun",
       description: "Can be ridden. While in party, player and party Pals take (15~30)% less Ice damage and are immune to Freeze. (Does not stack)",
     },
+    nocturnal: false,
     description: "Despite its appearance, Kitsun is extremely sensitive and will flee into a cave when spooked. Long ago, it was considered an ill omen if one ran away from you.",
   },
   {
@@ -4419,6 +4584,7 @@ export const pals: IPal[] = [
       name: "Gloomhowl",
       description: "Can be ridden. While in party, player and party Pals take (15~30)% less Dark damage and are immune to Blind. (Does not stack)",
     },
+    nocturnal: true,
     description: "Despite its appearance, Kitsun Noct is extremely sensitive and will flee into a cave when spooked. It has become quite gloomy from being a shut-in for too long.",
   },
   {
@@ -4443,6 +4609,7 @@ export const pals: IPal[] = [
       name: "Hellflame Lion",
       description: "Can be ridden. While in party, Grass Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: false,
     description: "While it prefers raw meat, it always ends up eating well-done meat. This is due to its blistering claws, which it uses as its weapon—it simply doesn't realize its prey gets burned to a crisp.",
   },
   {
@@ -4467,6 +4634,7 @@ export const pals: IPal[] = [
       name: "Darkflame Lion",
       description: "Can be ridden. While in party, Neutral Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: true,
     description: "While it prefers raw meat, it always ends up eating tainted meat. This is due to its dark claws, which it uses as its weapon—it simply doesn't realize its prey gets cursed.",
   },
   {
@@ -4499,6 +4667,7 @@ export const pals: IPal[] = [
       name: "Cast-Iron Shell",
       description: "While in your party, generates a barrier around the player after 5 melee hits are landed within (5~9) seconds. (Does not stack)",
     },
+    nocturnal: false,
     description: "The ultra-hard armor surrounding its body is extremely strong and heat resistant. Even a napalm blast would hardly leave a scratch.",
   },
   {
@@ -4527,6 +4696,7 @@ export const pals: IPal[] = [
       name: "Fullmetal Shell",
       description: "While in your party, generates a barrier around the player after 5 melee hits are landed within (5~9) seconds. (Does not stack)",
     },
+    nocturnal: false,
     description: "The ultra-hard armor surrounding its body is extremely strong and heat resistant. It doesn't flinch even if a Mammorest steps on it.",
   },
   {
@@ -4551,6 +4721,7 @@ export const pals: IPal[] = [
       name: "Peacock Pounce",
       description: "While in party, Frostplume's icy aura sharpens focus, increasing the player's reload speeds by (20~50)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "So precise is its sense of time that it awakens at the exact same hour every morning. According to Palpagos lore, a day was divided into 24 parts because when Frostplume spreads its tail feathers wide, it reveals a pattern with 24 distinct spaces.",
   },
   {
@@ -4583,6 +4754,7 @@ export const pals: IPal[] = [
       name: "Phantasmal Arcana",
       description: "While in party, when the player attacks an enemy afflicted with Burn, the enemy creates flames around itself, dealing continuous damage equal to (15~30)% of the player's attack damage to enemies that come into contact with them. (Does not stack.)",
     },
+    nocturnal: true,
     description: "It appears to be striking a heroic pose, but the reality is that it's simply bracing itself against the weight of its tail and hair to avoid toppling over.",
   },
   {
@@ -4611,6 +4783,7 @@ export const pals: IPal[] = [
       name: "Silk Shroud",
       description: "When activated, attacks targeted enemy with Blizzard Spike. When this Pal uses Blizzard Spike, it has a x(1.1~2.5) damage multiplier. Sometimes makes High Quality Cloth when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "A Pal that likes the rain, and will often bask in rain showers until the weather clears up. On rainy days, Foxparks can often be found taking shelter beneath it.",
   },
   {
@@ -4635,6 +4808,7 @@ export const pals: IPal[] = [
       name: "Gilded Shroud",
       description: "While in party, increases Defense of Neutral Pals by (15~30)%. (Does not stack) Sometimes makes High Quality Cloth when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "A Pal that loves gazing into the void, and will often remain completely still. It frequently becomes a gathering spot for smaller Pals.",
   },
   {
@@ -4659,6 +4833,7 @@ export const pals: IPal[] = [
       name: "Messenger of Death",
       description: "Can be ridden. While in party, all Party Pals' Active Skill cooldowns are reduced by (30~60)% whenever you defeat an enemy. (Does not stack)",
     },
+    nocturnal: true,
     description: "It relishes the peculiar scent living things give off when they are near death. If a Maraith has taken a liking to you, it is safe to assume that is why.",
   },
   {
@@ -4695,6 +4870,7 @@ export const pals: IPal[] = [
       name: "Rampant Spores",
       description: "Can be ridden. Sometimes drops Mushroom or Cavern Mushroom when assigned to Ranch.",
     },
+    nocturnal: false,
     description: "Inhaling large amounts of its spores will put you into a trance. Sometimes, if Shroomer appears motionless, it's not because it's mimicking a mushroom, but rather because it's high off its own spores.",
   },
   {
@@ -4727,6 +4903,7 @@ export const pals: IPal[] = [
       name: "Roiling Spores",
       description: "Can be ridden. While at a base, its mysterious spores slow the rate at which the SAN value of allies at the base decreases by (10~15)%.",
     },
+    nocturnal: true,
     description: "The abundance of spores released by this Pal blocks out sunlight. Sometimes, if Shroomer Noct appears motionless, it's not because it's mimicking a mushroom, but rather because its own spores don't let it see anything.",
   },
   {
@@ -4759,6 +4936,7 @@ export const pals: IPal[] = [
       name: "Witch's Icy Veil",
       description: "When activated, Icelyn changes the player's attack type to Ice and increases Attack by (30~50)%.",
     },
+    nocturnal: false,
     description: "Though its body melts in the heat, it just can’t resist sunbathing. Though its body melts in the warmth, it likes hot springs too much. If it's going to melt anyway, it hopes it’ll be in a steaming outdoor bath under a clear blue sky.",
   },
   {
@@ -4787,6 +4965,7 @@ export const pals: IPal[] = [
       name: "Resurrection",
       description: "While fighting together, when Gildra is incapacitated, it revives with its Hunger reduced to 0.",
     },
+    nocturnal: true,
     description: "The golden, bandage-like organs covering its body are highly elastic. However, they are prone to tearing under extremely dry conditions, so daily moisture checks are absolutely essential.",
   },
   {
@@ -4807,6 +4986,7 @@ export const pals: IPal[] = [
       name: "Stormbringer Sea Dragon",
       description: "Can be ridden to travel on water. While in party, increases player's and Pals' damage to enemies afflicted with Soak by (50~65)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Legend says the Jormuntide was once a wise man who, after being wrongly convicted and cast into a whirlpool, returned as this Pal to annihilate the kingdom.",
   },
   {
@@ -4827,6 +5007,7 @@ export const pals: IPal[] = [
       name: "Stormbringer Lava Dragon",
       description: "Can be ridden. While in party, nullifies lava damage and increases player's and Pals' damage to enemies afflicted with Burn by (50~65)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Legend says the Jormuntide Ignis was once a warrior who, after being wrongly convicted and cast into a volcano, returned as this Pal to annihilate the kingdom.",
   },
   {
@@ -4847,6 +5028,7 @@ export const pals: IPal[] = [
       name: "Wings of Flame",
       description: "Can be ridden as a flying mount. This Pal’s Movement Speed increases by (5~25)% for each other Fire Pal in your party. (Excluding Suzaku)",
     },
+    nocturnal: false,
     description: "It was once believed to usher in the dry season. Whenever there was a drought the previous year, people would relentlessly seek to cull its numbers, hoping to bring about a plentiful harvest in the next year.",
   },
   {
@@ -4867,6 +5049,7 @@ export const pals: IPal[] = [
       name: "Wings of Water",
       description: "Can be ridden as a flying mount. This Pal’s Movement Speed increases by (5~25)% for each other Water Pal in your party. (Excluding Suzaku Aqua)",
     },
+    nocturnal: false,
     description: "It was once believed to usher in the rainy season. Whenever there was a flood the previous year, people would relentlessly seek to cull its numbers, hoping to avert disaster in the coming year.",
   },
   {
@@ -4887,6 +5070,7 @@ export const pals: IPal[] = [
       name: "Sand Sprint",
       description: "Can be ridden. Movement Speed is increased by (50~100)% while mounted on sand.",
     },
+    nocturnal: false,
     description: "Take one step forward and forget your doubts. Take two steps forward and forget your worries. Take three steps forward and forget your fears. Face any enemy.",
   },
   {
@@ -4919,6 +5103,7 @@ export const pals: IPal[] = [
       name: "Sky Dragon Affection",
       description: "Can be ridden as a flying mount. While in party, increases Attack of Dragon Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Sleeping while cuddling a Quivern is said to be a heavenly experience, but there are some who have been crushed and sent to heaven by ones that toss and turn in their sleep.",
   },
   {
@@ -4955,6 +5140,7 @@ export const pals: IPal[] = [
       name: "Grass Dragon Affection",
       description: "Can be ridden as a flying mount. While mounted, changes the player’s attack type to Grass and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "When you hug Quivern Botan, if it smells like sunshine and meadows, tomorrow will be sunny. If it smells damp, tomorrow will be wet and miserable.",
   },
   {
@@ -4987,6 +5173,7 @@ export const pals: IPal[] = [
       name: "Floral Boost",
       description: "While at a base, Lullu fills farms with good spirits, increasing the growth rate of the crops by (50~70)%.",
     },
+    nocturnal: false,
     description: "In early spring, pollen floats on the wind throughout the island. Flopie's hay fever is Lullu's fault.",
   },
   {
@@ -5007,6 +5194,7 @@ export const pals: IPal[] = [
       name: "Sandball Soccer",
       description: "While in party, increases Defense of Ground Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "A decade ago, Kikit soccer was popular. However, it quickly fell out of favor due to fierce opposition from the Free Pal Alliance. Nevertheless, the Kikit's themselves didn't mind because it helped shed their old carapace.",
   },
   {
@@ -5027,6 +5215,7 @@ export const pals: IPal[] = [
       name: "Birds of a Feather",
       description: "Can be ridden. While fighting together, (15~30)% increased chance of encountering pals with the same Passive Skill as this Pal. (Excludes certain Passive Skills)",
     },
+    nocturnal: false,
     description: "It has a strong sense of justice and despises evil. In the past they were faithful and loving companions to the islanders. Nowadays, Yakumos are hostile to humans wherever they spot them.",
   },
   {
@@ -5055,6 +5244,7 @@ export const pals: IPal[] = [
       name: "Fish Fillet",
       description: "When activated, Skutlass becomes the player's katana (Attack: (2600~3900)). If it does not revert to its normal form quickly, Skutlass will become incapacitated. It will also become incapacitated if Iaigiri is used.",
     },
+    nocturnal: false,
     description: "A bizarre species which temporarily separates its body and uses its bones to slice through enemies, at the risk of perishing itself upon taking too long. While unconfirmed, older individuals are said to deliberately stay separated in order to trigger their survival instincts and prolong their lifespans.",
   },
   {
@@ -5087,6 +5277,7 @@ export const pals: IPal[] = [
       name: "Seared Fish Fillet",
       description: "When activated, Skutlass Ignis becomes the player's katana (Attack: (2900~4200)). If it does not revert to its normal form quickly, Skutlass Ignis will become incapacitated. It will also become incapacitated if Iaigiri is used.",
     },
+    nocturnal: false,
     description: "A bizarre species which temporarily separates its body and uses its bones to slice through enemies, at the risk of perishing itself upon taking too long. While unconfirmed, older individuals are said to deliberately stay separated in order to trigger their survival instincts and prolong their lifespans.",
   },
   {
@@ -5111,6 +5302,7 @@ export const pals: IPal[] = [
       name: "Ore-Loving Beast",
       description: "Can be ridden. While in party, reduces weight of all types of ore by (30~60)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Magma-like blood runs throughout its body. If a large amount of water is thrown on it, the water rapidly heats, causing an immense vapor explosion.",
   },
   {
@@ -5135,6 +5327,7 @@ export const pals: IPal[] = [
       name: "Ice-Loving Beast",
       description: "Can be ridden. While in party, reduces weight of all types of ore by (35~65)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Ice cold blood runs throughout its body. If heated rapidly, its blood evaporates, causing an immense vapor explosion.",
   },
   {
@@ -5155,6 +5348,7 @@ export const pals: IPal[] = [
       name: "Night Dancer",
       description: "Can be ridden. Boosts jumping ability while mounted. This Pal's movement speed increases by +(50~100)% at night.",
     },
+    nocturnal: true,
     description: "It takes great pride in its flowing, gorgeous mane. If it finds a split end, it becomes so mortified it can't focus on running properly. Because static electricity makes its hair frizzy, it avoids Azurmane at all costs.",
   },
   {
@@ -5175,6 +5369,7 @@ export const pals: IPal[] = [
       name: "Light Dancer",
       description: "Can be ridden. Boosts Jump Power while mounted. This Pal’s Movement Speed increases by (5~25)% for each other Neutral Pal in your party. (Excluding Starryon Primo)",
     },
+    nocturnal: false,
     description: "It takes great pride in its glowing, gorgeous mane. If it gets even slightly dirty, it becomes so mortified it can't focus on running properly. Because skin oils ruin its coat, it wants to avoid being touched too much, even by its favorite Pal Tamer.",
   },
   {
@@ -5195,6 +5390,7 @@ export const pals: IPal[] = [
       name: "Power Stone",
       description: "While in party, increases player's and Pals' damage to enemies afflicted with Muddy by (50~65)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "It smashes its body against harder rocks to maintain its preferred shape. Those with noticeable dents are best left alone, much like people with a botched haircut.",
   },
   {
@@ -5219,6 +5415,7 @@ export const pals: IPal[] = [
       name: "Power Crystal",
       description: "While in party, player and party Pals take (15~30)% less Dragon damage. (Does not stack)",
     },
+    nocturnal: false,
     description: "It basks in the sun, rotating just enough to melt its ice into its preferred shape. Lopsided ones should be left alone, much like a person who was a little too bold with their sideburns.",
   },
   {
@@ -5251,6 +5448,7 @@ export const pals: IPal[] = [
       name: "Dragon Hunter",
       description: "While in party, Dragon Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: false,
     description: "It can easily climb steep mountains with its hard claws. However, its short legs make it difficult to descend, often leaving it stranded in high places.",
   },
   {
@@ -5283,6 +5481,7 @@ export const pals: IPal[] = [
       name: "Explosive Strength",
       description: "While in party, when attacking enemy weak point, increases the power of the next weak point attack by (30~60)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "It can easily carry many items with its large hands. However, its short legs slow its pace, often leaving it overtaken by nightfall.",
   },
   {
@@ -5315,6 +5514,7 @@ export const pals: IPal[] = [
       name: "Invisible Eye",
       description: "While in party, reduces the chance of being detected by enemies. (Does not stack)",
     },
+    nocturnal: false,
     description: "“To look at a Snugloo's eyes” is an expression which means to seek the unseen essence of things. Ironically, no researcher has ever confirmed whether Snugloos have eyes in the first place.",
   },
   {
@@ -5347,6 +5547,7 @@ export const pals: IPal[] = [
       name: "Guardian of the Snowy Mountain",
       description: "Can be ridden. While at a base, increases the Transporting Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "Researchers once tried to shave off its hair to reveal its true form. In the end, only hair was left, as if that was all there was to begin with.",
   },
   {
@@ -5379,6 +5580,7 @@ export const pals: IPal[] = [
       name: "Guardian of the South",
       description: "Can be ridden. While in party, player and party Pals take (15~30)% less Ground damage and are immune to Muddy status. (Does not stack)",
     },
+    nocturnal: false,
     description: "Researchers once tried to cut the grass off its body to reveal its true form. In the end, only grass was left, as if that was all there was to begin with.",
   },
   {
@@ -5415,6 +5617,7 @@ export const pals: IPal[] = [
       name: "Grave Robber",
       description: "While in party, player and party Pals take (15~30)% less Neutral damage. (Does not stack) Sometimes digs up Bone when assigned to Ranch.",
     },
+    nocturnal: true,
     description: "It was once believed that as the world approached its end, the flame would weaken. Doomsayers would repeatedly rejoice when the flame began to weaken, but in the end, it turned out to be a prank by Sootseer. At least, for now.",
   },
   {
@@ -5447,6 +5650,7 @@ export const pals: IPal[] = [
       name: "Entangling Tongue",
       description: "While in party, when the player performs a dodge roll or dodge step, Carnibora creates a whirlwind that deals damage to enemies it touches (Grass / Power: (40~80)). (Does not stack)",
     },
+    nocturnal: false,
     description: "Prone to eating indiscriminately, the mouth atop its head frequently breaks out in agonizing ulcers, causing it to use the mouth on its face instead. However, its behavior doesn't change, which leads to both mouths suffering the same ulcers.",
   },
   {
@@ -5471,6 +5675,7 @@ export const pals: IPal[] = [
       name: "Magma Kaiser",
       description: "Can be ridden. While in party, increases the Attack and Defense of the Pal fighting alongside you by (5~10)% whenever you defeat an enemy. This effect lasts 20 seconds and stacks up to five times.",
     },
+    nocturnal: false,
     description: "Legends say it was born during a volcanic eruption. A strange group even claims that this continent is laid upon the back of a giant Blazamut.",
   },
   {
@@ -5495,6 +5700,7 @@ export const pals: IPal[] = [
       name: "Dragon Kaiser",
       description: "Can be ridden. While in party, improves player's and Pals' Dragon damage to enemy weak points by (25~40)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Long ago, it emerged from the depths of the earth. With relentless, raging flames showing no mercy, it burned the entire island until nothing remained. It was known as the Eternal Flame.",
   },
   {
@@ -5531,6 +5737,7 @@ export const pals: IPal[] = [
       name: "Forest Laser",
       description: "Can be ridden. When activated, Dualith fires a powerful Grass laser from its right hand.",
     },
+    nocturnal: false,
     description: "One entity, two minds. When their wills clash, it's impossible to tell where the armor will wander until they reconcile.",
   },
   {
@@ -5567,6 +5774,7 @@ export const pals: IPal[] = [
       name: "Corruption Laser",
       description: "Can be ridden. When activated, Dualith Noct fires a powerful Dark laser from its right hand.",
     },
+    nocturnal: true,
     description: "One entity, two minds. They rarely agree and bicker constantly, but once battle begins, mind and body instantly unite as one!",
   },
   {
@@ -5595,6 +5803,7 @@ export const pals: IPal[] = [
       name: "Guardian of the Desert",
       description: "When activated, Anubis changes the player's attack type to Ground and increases Attack by (30~50)%. Occasionally evades attacks with a flash sidestep during battle.",
     },
+    nocturnal: false,
     description: "Once seen as a symbol of nobility, and an idol for those who shunned wealth and power. Yet over time, this Pal became a token of death.",
   },
   {
@@ -5623,6 +5832,7 @@ export const pals: IPal[] = [
       name: "Desert Empress",
       description: "While at base, boosts Anubis's work speed by (20~40)%. Increases efficiency by (30~60)% if Sekhmet is also working at a Workbench, Workshop, or other related facilities. (Does not stack)",
     },
+    nocturnal: false,
     description: "Once a fierce creature feared as a symbol of death. When Anubis claimed that mantle, wealthy elites looking for a replacement beguiled the species with wine. Before long, Sekhmet became a symbol of high nobility.",
   },
   {
@@ -5651,6 +5861,7 @@ export const pals: IPal[] = [
       name: "Phantom Venom",
       description: "While in party, increases player's and Pals' damage to enemies afflicted with Poison by (50~65)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "It has about 5,000 types of venom. Some of them are deadly enough to cause instant death, but none are present in a high enough concentration to have any effect.",
   },
   {
@@ -5683,6 +5894,7 @@ export const pals: IPal[] = [
       name: "Scorpion Longwave",
       description: "When activated, Prixter Lux changes the player's attack type to Electric and increases Attack by (30~50)%.",
     },
+    nocturnal: false,
     description: "It pierces foes with its tail to deliver an electric jolt directly into their bodies. However, the current it generates is extremely weak, so a simple punch would do far more damage.",
   },
   {
@@ -5703,6 +5915,7 @@ export const pals: IPal[] = [
       name: "Masonry Archelon",
       description: "Can be ridden While at a base, increases the Mining Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "Those stones on its back are not just cargo. Set them down somewhere distant and they will slowly make their way back home.",
   },
   {
@@ -5723,6 +5936,7 @@ export const pals: IPal[] = [
       name: "Stone-Chaser Archelon",
       description: "Can be ridden. While in party, increases the durability of all weapons and armor by (80~100)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Even if the stones on its back were to be removed, Tetroise Primo will know where they are. No matter how far apart, it will always track them down.",
   },
   {
@@ -5755,6 +5969,7 @@ export const pals: IPal[] = [
       name: "Shot-Nyan Mode",
       description: "When activated, Nyafia will fire a shotgun at nearby enemies for a limited time. While in party, increases the player's shotgun damage by (10~35)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "Strongly dislikes anyone catching a glimpse of its concealed eye. If you insist on trying, it'll burst into tears and ignore you for two weeks.",
   },
   {
@@ -5779,6 +5994,7 @@ export const pals: IPal[] = [
       name: "Master of Unlocking",
       description: "While fighting together, Mimog can open treasure chests without using a key.",
     },
+    nocturnal: false,
     description: "There was once a tradition of handing out an award to the person who met their end in the most foolish way. The first award was given for |being unaware of Mimog, opening the chest, and being bitten to death.|",
   },
   {
@@ -5803,6 +6019,7 @@ export const pals: IPal[] = [
       name: "Unknown Invader",
       description: "While in party, increases the damage of the last bullet fired from a full-auto weapon by (100~160)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "Can send information and convert it into energy by forgetting it. Regularly seems to be sending information to someone. - Respond. Target located. Proceed to immediate destruction.",
   },
   {
@@ -5823,6 +6040,7 @@ export const pals: IPal[] = [
       name: "Unknown Intruder",
       description: "Can be ridden. While in party, increases the player's energy weapon damage by (10~35)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "Consumes information and turns it into energy. Regularly seems to be sending information to someone. - Hello? What was the message you just sent? I devoured it before checking.",
   },
   {
@@ -5859,6 +6077,7 @@ export const pals: IPal[] = [
       name: "Prayer for Abundant Harvest",
       description: "While at a base, Prunelia's prayers bless the crops, increasing their harvest by (18~35)%.",
     },
+    nocturnal: true,
     description: "Intelligent and graceful in its demeanor, it was frequently employed as an attendant by the island's nobles. However, when encountered at night, its face looked so eerie that it quickly fell out of favor.",
   },
   {
@@ -5883,6 +6102,7 @@ export const pals: IPal[] = [
       name: "Soul Collector",
       description: "While fighting together, Pals drop +(100~200)% more Pal Souls when defeated. (Does not stack)",
     },
+    nocturnal: true,
     description: "What it carries is its own soul. When it falls for someone, it forcibly extracts their soul and merges it with its own, yearning to become one.",
   },
   {
@@ -5911,6 +6131,7 @@ export const pals: IPal[] = [
       name: "Soul Binder",
       description: "While in party, increases Defense of Grass Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "What it carries is its own soul. When it falls for someone, it flings its soul at them to merge it with theirs, yearning to become one.",
   },
   {
@@ -5931,6 +6152,7 @@ export const pals: IPal[] = [
       name: "Dig, Smokie! Dig!",
       description: "When activated, uses its sharp sense of smell to detect nearby Chromite. While fighting together, Chromite acquisition increases by +(100~200)%.",
     },
+    nocturnal: true,
     description: "The black flames are merely warm to the touch, but anything left in contact with them slowly melts from the inside. Hold some cheese over them, and it becomes a true delicacy.",
   },
   {
@@ -5955,6 +6177,7 @@ export const pals: IPal[] = [
       name: "Cryo Instincts",
       description: "While at a base, increases the Cooling Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: true,
     description: "The blue flames are merely cool to the touch, but anything left in contact with them slowly freezes. Hold a milk bottle over them, and you get a frozen milkshake!",
   },
   {
@@ -5975,6 +6198,7 @@ export const pals: IPal[] = [
       name: "Masquerade Dance",
       description: "While in party, increases Party Pals' EXP gained by (40~80)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "The mask it wears is not its face, they say. It seems in front, but it's not there, no way. From shadows deep, it watches night and day. Glance away, and closer it will stray.",
   },
   {
@@ -5999,6 +6223,7 @@ export const pals: IPal[] = [
       name: "Chilled Whale Cruiser",
       description: "Can be ridden. While in party, fishing minigames start with the capture gauge increased by (5~14)%. Additionally, while the bars overlap, capture progress increases by (5~14)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "When it sleeps, Pals often mistake it for a drifting piece of ice and rest on it. Although gentle and unwilling to push them away when awake, it feels quietly stressed by the intrusion on its personal space.",
   },
   {
@@ -6023,6 +6248,7 @@ export const pals: IPal[] = [
       name: "Cozy Whale Cruiser",
       description: "Can be ridden. While in party, fishing minigame begins with the capture gauge (7~17)% higher than usual, and capture progress increases by (7~17)% while the bars overlap. (Does not stack)",
     },
+    nocturnal: false,
     description: "Determined never to be mistaken for drift ice again, it turned bright red through sheer will. Unfortunately, some Pals can’t see red. So despite its efforts, its personal space continues to be invaded.",
   },
   {
@@ -6059,6 +6285,7 @@ export const pals: IPal[] = [
       name: "Grassland Gymnast",
       description: "While in party, grants 1 additional jump and 1 additional mid-air dash. (Does not stack)",
     },
+    nocturnal: false,
     description: "Land that Verdash has run across becomes extremely fertile, with thick vegetation growing soon after. It will not run anywhere that herbicide has been used.",
   },
   {
@@ -6091,6 +6318,7 @@ export const pals: IPal[] = [
       name: "Blade of Uncontrolled Passion",
       description: "While in party, the amount of items obtained from using the Meat Cleaver increases by (100~200)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "It has an uncontrollable urge to tear its prey apart. Each individual has their own meticulous order for dismemberment. If caught by Splatterina, pray that your head is taken first.",
   },
   {
@@ -6111,6 +6339,7 @@ export const pals: IPal[] = [
       name: "Sandstorm's Blessing",
       description: "Can be ridden. While mounted, changes the player’s attack type to Ground and increases Attack by (5~20)%.",
     },
+    nocturnal: false,
     description: "During the golden age of alchemy on the island, its ever-glowing golden fur was highly prized as a catalyst for transmuting gold. In time, a remarkable revelation was made: the same golden hue could be achieved simply by processing its mane.",
   },
   {
@@ -6147,6 +6376,7 @@ export const pals: IPal[] = [
       name: "Homeward Prayer",
       description: "When activated, teleports to the nearest base. Cannot be used inside dungeons or similar areas.",
     },
+    nocturnal: false,
     description: "Striving for a state of selflessness, it meditates endlessly. After confronting its worldly desires, it eats a meal and reflects. It ate too much today.",
   },
   {
@@ -6171,6 +6401,7 @@ export const pals: IPal[] = [
       name: "Yokozuna's Presence",
       description: "Can be ridden. While in party, player and party Pals take (15~30)% less Electric damage and are immune to Electrify. (Does not stack)",
     },
+    nocturnal: false,
     description: "In the old islands, Bulldosu sumo was widely enjoyed. At the highest levels, even a charging Rushoar would be sent flying instead.",
   },
   {
@@ -6195,6 +6426,7 @@ export const pals: IPal[] = [
       name: "Blessing of Purification",
       description: "Can be ridden. This Pal's Attack and Movement Speed increases by (2~6)% for each other Neutral Pal in your party. When in party, recovers Health of the player and Party Pals by (0.15~0.75)% per second. (Does not stack)",
     },
+    nocturnal: false,
     description: "Ancient texts refer to it as the |Beast of Salvation.| The light emitted by Celesdir purifies everything, literally causing things to vanish from existence without leaving a trace.",
   },
   {
@@ -6219,6 +6451,7 @@ export const pals: IPal[] = [
       name: "Blessing of Chaos",
       description: "Can be ridden. While in party, the Pal fighting alongside you gradually loses Health in exchange for (40~80)% Attack increase. (Does not stack)",
     },
+    nocturnal: true,
     description: "Where blinding radiance shines, dark shadows are born. It scatters an all-enveloping darkness to reclaim the chaos that ought to be. Balance is what the world requires.",
   },
   {
@@ -6243,6 +6476,7 @@ export const pals: IPal[] = [
       name: "Black Ankylosaur",
       description: "Can be ridden as a flying mount. Increases the damage dealt to ores by (1100~3300)%, and you can obtain (150~300)% more Ore while mounted.",
     },
+    nocturnal: true,
     description: "A savage beast born of the abyss. Thou shall not stand before the beast. Thou shall not heed the beast.",
   },
   {
@@ -6271,6 +6505,7 @@ export const pals: IPal[] = [
       name: "Steel Guardian Mode",
       description: "When activated, a steel resolve increases Knocklem's Attack by (50~200)% and Defense by (50~200)% for a limited time.",
     },
+    nocturnal: false,
     description: "Can be disassembled into 215 parts. It is capable of being reassembled and functioning again even if the parts are scattered. Mixing parts from different individuals will trigger a malfunction due to mistaken identity.",
   },
   {
@@ -6299,6 +6534,7 @@ export const pals: IPal[] = [
       name: "Iron Guardian Mode",
       description: "When activated, a steel resolve increases Knocklem Ignis's Attack by (60~210)% and Defense by (60~210)% for a limited time.",
     },
+    nocturnal: false,
     description: "Upon disassembly, it is capable of being reassembled and functioning again. Mixing parts from different individuals will trigger a fatal cognitive error that causes its systems to overheat.",
   },
   {
@@ -6319,6 +6555,7 @@ export const pals: IPal[] = [
       name: "Aegis Shield",
       description: "Can be ridden. While in party, reduces shield regeneration delay by (30~60)% and reduces damage taken by your shield by (65~80)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "The metallic components around its neck possess magnetic properties. If the leg pieces get too close, they cling to it. When metal debris builds up on its neck, it grudgingly begins cleaning, and grows frustrated when they won't come off easily.",
   },
   {
@@ -6339,6 +6576,7 @@ export const pals: IPal[] = [
       name: "Plasma Dash",
       description: "Can be ridden. Grants Air Dash, to move at even higher speeds.",
     },
+    nocturnal: false,
     description: "Like Univolt, it was once believed to be connected to the Thunder God. As faith in Univolt waned, Azurmane was deemed the God's true envoy. Even so, time reduced both to the same lowly status of ordinary workhorses.",
   },
   {
@@ -6359,6 +6597,7 @@ export const pals: IPal[] = [
       name: "Big Stretch",
       description: "While in party, reduces the effects of gravity on the player, making them more floaty while jumping and falling. (Does not stack)",
     },
+    nocturnal: false,
     description: "In older paintings, it is depicted as much smaller than it is today. For reasons unknown, various parts of its body have begun to elongate rapidly in recent years, and it is predicted to reach nearly ten times its current size within the next century.",
   },
   {
@@ -6379,6 +6618,7 @@ export const pals: IPal[] = [
       name: "Charging Shell",
       description: "While in party, the player's attacks inflict Electrify (2~6). (Does not stack)",
     },
+    nocturnal: false,
     description: "Tossing an Snock into the bath for a shock spa is considered a traditional health practice. That is to say, the results may be rather shocking.",
   },
   {
@@ -6399,6 +6639,7 @@ export const pals: IPal[] = [
       name: "Grounding Shell",
       description: "While in party, player and party Pals take (15~30)% less Water damage, and are immune to Soak. (Does not stack)",
     },
+    nocturnal: false,
     description: "Tossing a heated Snock Lux into the bath for a scorching spa was once a fad of the distant past. Owing to a recent revival, it is now quite literally a hot trend.",
   },
   {
@@ -6423,6 +6664,7 @@ export const pals: IPal[] = [
       name: "Fuzzy Fairy",
       description: "While in party, increases the capture rate of Pals afflicted with Ivy-Covered. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its fluff can be used to hide away unpleasant memories. Once carried off by the wind, you can bid farewell to the darkness they carried.",
   },
   {
@@ -6455,6 +6697,7 @@ export const pals: IPal[] = [
       name: "Friend of Earth",
       description: "While in party, increases the player's Defense by (50~65)% while sprinting. (Does not stack)",
     },
+    nocturnal: false,
     description: "Listens to the earth as it runs, avoiding unstable footing with ease. However, uncooperative terrain will trick it into falling over constantly.",
   },
   {
@@ -6479,6 +6722,7 @@ export const pals: IPal[] = [
       name: "Void-Dweller",
       description: "While in party, increases the player's damage dealt to enemies that are not in combat by (50~100)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "When it sleeps, it deflates. When it sleeps, it's no longer there. A sleeping Hoodle cannot exist; Therefore, Hoodle never sleeps.",
   },
   {
@@ -6499,6 +6743,7 @@ export const pals: IPal[] = [
       name: "Chillswitch",
       description: "While in party, when the player attacks an enemy afflicted with Electrify, the enemy discharges electricity, dealing damage equal to (40~60)% of the player's attack damage to nearby enemies. (Does not stack.)",
     },
+    nocturnal: false,
     description: "Doing as they please, sleeping when they wish, and eating whatever they like. Surely, Slowatt must be toiling in secret to maintain such a luxury. ...Or so the old islanders told themselves, just to get by.",
   },
   {
@@ -6527,6 +6772,7 @@ export const pals: IPal[] = [
       name: "Grinning Death",
       description: "While in party, attacking enemies afflicted with Poison reduces their Attack by (40~80)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "It lives entirely for the thrill of the scare, but is utterly un-frightening. As most cannot help but indulge it with feigned surprise for its cuteness, Bakemi now leaves a trail of smiles in its wake.",
   },
   {
@@ -6547,6 +6793,7 @@ export const pals: IPal[] = [
       name: "Charming Fish",
       description: "Can be ridden to travel on water. While in party, makes it easier to fish up talented Pals. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its corkscrew tail acts as a propeller. Research claims that if its body could withstand the strain, it could reach speeds beyond 88 mph.",
   },
   {
@@ -6571,6 +6818,7 @@ export const pals: IPal[] = [
       name: "Shocking Fish",
       description: "Can be ridden to travel on water. While mounted, changes the player's attack type to Electric and increases Attack by (5~20)%. While in party, makes it easier to fish up talented Pals. (Does not stack)",
     },
+    nocturnal: false,
     description: "Its corkscrew tail acts as a propeller. Research claims that if its body could withstand the strain, it could generate over 1.21 gigawatts of power.",
   },
   {
@@ -6595,6 +6843,7 @@ export const pals: IPal[] = [
       name: "Long-Sleeved Hurray",
       description: "While in party, reduces the Partner Skill cooldowns for other party Pals by (10~50)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "It uses the long, flowing fur on its hands to attract attention, always taking the utmost care to keep them maintained. Highly sensitive to dirt and meticulously clean, kicking up dust nearby will invite a very disgusted glare.",
   },
   {
@@ -6615,6 +6864,7 @@ export const pals: IPal[] = [
       name: "Liberated Pterosaur",
       description: "Can be ridden as a flying mount. This Pal's Attack and Movement Speed increase by (2~6)% for each other Dragonor Dark Pal in your party.",
     },
+    nocturnal: true,
     description: "A new Pal that was only recently discovered. Calm and entirely docile, it spends its time as it pleases. It is no longer bound by anything.",
   },
   {
@@ -6639,6 +6889,7 @@ export const pals: IPal[] = [
       name: "Resentful Pterosaur",
       description: "Can be ridden as a flying mount. This Pal's Attack and Movement Speed increase by (2~6)% or each other Dragon or Fire Pal in your party. (Excluding Eidrolon Ignis)",
     },
+    nocturnal: false,
     description: "A new Pal that was only recently discovered. It trusts nothing and no one, and its tempermental nature leads to it constantly venting its rage at the nearest target.",
   },
   {
@@ -6667,6 +6918,7 @@ export const pals: IPal[] = [
       name: "Electro-Massage Incubation",
       description: "Can be ridden as a flying mount. While at a base, shortens the time it takes to incubate eggs by (20~40)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "With so little to eat at high altitudes, it will occasionally even feast on its enemies' brains. It is thought that groups seeking a more dependable food source descended to lower skies, ultimately diverging into Beakon.",
   },
   {
@@ -6691,6 +6943,7 @@ export const pals: IPal[] = [
       name: "Flower Dance",
       description: "While in party, extends the invincibility period during dodge rolls and dodge steps by (15~30)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "While some say that it flails around to mimic flowers swaying in the wind and avoid predators, others argue that a crimson flower thrashing violently at high speeds is simply so unsettling that nothing dares approach it.",
   },
   {
@@ -6719,6 +6972,7 @@ export const pals: IPal[] = [
       name: "Burning Future",
       description: "While in party, when the player attacks an enemy afflicted with Burn, the enemy explodes, dealing damage equal to (40~60)% of the player's attack damage to nearby enemies. (Does not stack.)",
     },
+    nocturnal: false,
     description: "It focuses its mind and reads the future through flames. Should it glimpse an inconvenient destiny, it relentlessly rerolls the prophecy until it gets a favorable result. That is why the future of Flaracle is always exceptionally bright!",
   },
   {
@@ -6743,6 +6997,7 @@ export const pals: IPal[] = [
       name: "Glorious Mist",
       description: "Can be ridden. While in party, the player's attacks inflict Soak (2~6). (Does not stack)",
     },
+    nocturnal: false,
     description: "Waters where Ophydias dwell are often filled with flowers that mimic its form. Many attempts have been made to directly propagate these blooms, but they inevitably wither the moment human hands interfere.",
   },
   {
@@ -6775,6 +7030,7 @@ export const pals: IPal[] = [
       name: "Trick-Loving Fluffle",
       description: "While in party, when the player's Health falls below 50%, Dupin generates an explosion around the player (Fire / Power: (100~200) / Burn buildup: 777). Additionally, while the player's Health is below 50%, the player's Attack is increased by (30~50)%. (Does not stack)",
     },
+    nocturnal: false,
     description: "A copy it created might quietly replace it, leaving even the Dupin itself unsure whether it is still the original.",
   },
   {
@@ -6799,6 +7055,7 @@ export const pals: IPal[] = [
       name: "Dark-Nester",
       description: "Can be ridden as a flying mount. While in party, increases player's and Pals' damage to enemies afflicted with Blind by (50~65)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "A thief by nature, it snatches items when no one is looking. No reason to be concerned when caught in the act. Once it swiftly steals your eyes, you won’t be seeing anything anyway.",
   },
   {
@@ -6831,6 +7088,7 @@ export const pals: IPal[] = [
       name: "Snake's Sagacity",
       description: "While in party, the player's attacks inflict Blind (2~6). (Does not stack)",
     },
+    nocturnal: true,
     description: "Whenever it's confused, it resorts to consulting with the snakes on its head. However, since they're all ultimately the same being, it comes to understand that nothing is understood.",
   },
   {
@@ -6863,6 +7121,7 @@ export const pals: IPal[] = [
       name: "Charming Spore",
       description: "While at a base, increases the Medicine Production Work Suitability Level for all other Base Pals by +1. (Does not stack)",
     },
+    nocturnal: false,
     description: "It views humans as nothing more than convenient parasitic hosts. The reason Mycora has taken this form is to deceive humans into lowering their guard, allowing its spores to spread more efficiently.",
   },
   {
@@ -6891,6 +7150,7 @@ export const pals: IPal[] = [
       name: "Lantern Enchantment",
       description: "While in party, the player's arrows explode on contact, dealing additional damage equal to (15~30)% of the player's attack damage. (Does not stack)",
     },
+    nocturnal: true,
     description: "Its lantern glows with an eerie light that lays bare the truth of the world. If that light strikes you as blinding, then you most likely have something to hide.",
   },
   {
@@ -6919,6 +7179,7 @@ export const pals: IPal[] = [
       name: "Hidden Dark Energy",
       description: "While in party, increases Defense of Dark Pals by (15~30)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "At the end of its life, a new star appears somewhere in the skies, glowing with the weight of its memories.",
   },
   {
@@ -6947,6 +7208,7 @@ export const pals: IPal[] = [
       name: "Untainted Maiden",
       description: "While in party, increases the player's Attack by (30~80)% if all Pals in party are different species. (Does not stack)",
     },
+    nocturnal: true,
     description: "Joy and misery come in equal measure for Solenne. Those who choose to take care of one must be prepared for what that entails.",
   },
   {
@@ -6979,6 +7241,7 @@ export const pals: IPal[] = [
       name: "Stage Combat",
       description: "While in party, the player's attacks inflict Burn (2~6). (Does not stack)",
     },
+    nocturnal: false,
     description: "At a glance, its movements appear exaggerated and full of openings. Strangely, however, any opponents become overwhelmed, and become unable to look away, as if transfixed.",
   },
   {
@@ -6999,6 +7262,7 @@ export const pals: IPal[] = [
       name: "Indestructible Fortress",
       description: "Can be ridden. While in party, player and party Pals take (60~80)% less damage from explosive attacks, and are immune to Stun. (Does not stack)",
     },
+    nocturnal: false,
     description: "In ancient times, when means of communication were limited, the light within Aegidron's wings was used to send simple flash signals.",
   },
   {
@@ -7031,6 +7295,7 @@ export const pals: IPal[] = [
       name: "Yellow Tank",
       description: "Can be ridden. Can rapidly fire a minigun while mounted.",
     },
+    nocturnal: false,
     description: "With a friendly smile and a hardy physique, it is docile towards one it recognizes as a partner. For reasons unexplained, its personality undergoes a drastic change when wielding a minigun.",
   },
   {
@@ -7063,6 +7328,7 @@ export const pals: IPal[] = [
       name: "Harvest Goddess",
       description: "When activated, the queen's soothing graces restore the Health of the player and Party Pals by (80~90)%.",
     },
+    nocturnal: false,
     description: "A docile Pal full of love. It watches over small Pals who have lost their parents. It uses a full-power Solar Blast to discipline naughty Pals.",
   },
   {
@@ -7091,6 +7357,7 @@ export const pals: IPal[] = [
       name: "Goddess of the Tranquil Light",
       description: "When activated, the queen's soothing graces restore the Health of the player and Party Pals by (85~95)%.",
     },
+    nocturnal: true,
     description: "An elegant Pal full of grace. It admonishes any who are disrespectful with a painful slap. Some Pals actively seek out this punishment.",
   },
   {
@@ -7119,6 +7386,7 @@ export const pals: IPal[] = [
       name: "Ferocious Thunder Dragon",
       description: "While in party, hitting an enemy with a bullet increases the Attack and Defense of the Pal fighting alongside you by (1~5)% for 5 seconds. This effect stacks up to 30 times. (Does not stack.)",
     },
+    nocturnal: false,
     description: "It sends electricity into its foes' wounds, roasting them from the inside out. Fights between Orserk end in the blink of an eye.",
   },
   {
@@ -7143,6 +7411,7 @@ export const pals: IPal[] = [
       name: "Scorching Predator",
       description: "Can be ridden as a flying mount. While in party, Ice Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: false,
     description: "When it finds its prey it unleashes a whirlwind of flames, burning the entire area to ash. Faleris breath is known for its pleasing scent.",
   },
   {
@@ -7167,6 +7436,7 @@ export const pals: IPal[] = [
       name: "Tidal Predator",
       description: "Can be ridden as a flying mount. While in party, Fire Pals drop (40~80)% more items when defeated. (Does not stack)",
     },
+    nocturnal: false,
     description: "When it finds its prey, it unleashes a mighty torrent, sweeping the entire area. More often than not, the prey gets swept away in the chaos, leaving one to wonder whether this truly counts as hunting.",
   },
   {
@@ -7187,6 +7457,7 @@ export const pals: IPal[] = [
       name: "Modified DNA",
       description: "Can be ridden as a flying mount. While flying, Movement Speed is increased. Enhances Dark attacks by (15~30)% while mounted.",
     },
+    nocturnal: true,
     description: "Born from the depths of insanity, its very existence defies reason. Having lost all genetic ties to other Pals, one wonders if it could still even be considered a Pal.",
   },
   {
@@ -7215,6 +7486,7 @@ export const pals: IPal[] = [
       name: "Celestial Darkness",
       description: "Can be ridden as a flying mount. While mounted, enhances Neutral and Dark attacks by (15~30)%.",
     },
+    nocturnal: true,
     description: "The object floating behind, resembling the moon, is said to gradually become more circular with each passing generation. No one knows what will happen when the moon is full.",
   },
   {
@@ -7243,6 +7515,7 @@ export const pals: IPal[] = [
       name: "Blizzard Crash",
       description: "Can be ridden. While mounted, delivers crushing blows with a hammer forged from Ice.",
     },
+    nocturnal: false,
     description: "The sight of anything round gives it an uncontrollable urge to punch it. For Bastigor the toughest challenge, after simply living, is making a snowman.",
   },
   {
@@ -7267,6 +7540,7 @@ export const pals: IPal[] = [
       name: "Azure Sovereign",
       description: "Can be ridden as a flying mount. This Pal's Attack increases by (4~8)% for each other Dragon Pal in your party.",
     },
+    nocturnal: false,
     description: "Its ring is reserved for a special occasion: upon meeting its destined companion, the rings are traded, a symbol of their eternal partnership.",
   },
   {
@@ -7303,6 +7577,7 @@ export const pals: IPal[] = [
       name: "Spore Stalwart",
       description: "While in party, when the player attacks an enemy afflicted with Ivy-Covered, the enemy explodes, dealing additional damage equal to (40~60)% of the player's attack damage. (Does not stack) Also grants immunity to the World Tree's Explosive Spores to both the player and their Pals.",
     },
+    nocturnal: false,
     description: "Since ancient times, it has remained within the World Tree, continuing its vigil. What it protects, and for what purpose, Silvance does not know. After all, the World Tree will tell it everything. The spores it commands surely know who the enemy is.",
   },
   {
@@ -7339,6 +7614,7 @@ export const pals: IPal[] = [
       name: "Mist Stalwart",
       description: "When activated, the player's attacks inflict Poison (2~6). While in party, grants the player and party Pals immunity to Poison, and nullifies the effects of toxic gas in the World Tree area. (Does not stack)",
     },
+    nocturnal: true,
     description: "Since ancient times, it has remained within the World Tree, continuing its vigil. What it protects, and for what purpose, Dandilord does not care. After all, the World Tree knows everything. Only the mist it wields can reveal the truth.",
   },
   {
@@ -7367,6 +7643,7 @@ export const pals: IPal[] = [
       name: "Nightmare Iris",
       description: "When activated, attacks targeted enemy with Nightmare Ray. When this Pal uses Nightmare Ray, it has a x(1.1~2.5) damage multiplier.",
     },
+    nocturnal: true,
     description: "Without existing, she quietly gazed upon the world. One day, she was seized with a longing to be seen. With unbridled lust for vengeance against reality, thus was born the Eclipsed Siren.",
   },
   {
@@ -7395,6 +7672,7 @@ export const pals: IPal[] = [
       name: "Nightmare Stare",
       description: "When activated, attacks targeted enemy with Nightmare Bloom. When this Pal uses Nightmare Bloom, it has a x(1.1~2.5) damage multiplier.",
     },
+    nocturnal: true,
     description: "With her desires set loose, she was soon overwhelmed. She longed for a self to gaze upon herself. And the sisters who gazed, resenting reality, were driven into the abyss and, at last, closed their eyes.",
   },
   {
@@ -7415,6 +7693,7 @@ export const pals: IPal[] = [
       name: "Meteor Wings",
       description: "Can be ridden as a flying mount. While in party, damage done by Partner Skills of weapon-wielding Pals increases by (20~50)%. (Does not stack)",
     },
+    nocturnal: true,
     description: "-Destination reached. Priority: Locate entity |Supersonic Dragon| -Note: Conquest deadline exceeded by years. -Update: No conquest traces found. Naturalization confirmed. Commence elimination protocol. -Staff Memo: Refrain from forgetting or consuming critical data!",
   },
   {
@@ -7439,6 +7718,7 @@ export const pals: IPal[] = [
       name: "Sacred Barrier",
       description: "Can be ridden. While mounted, it generates a barrier that blocks all attacks. Can triple jump while mounted.",
     },
+    nocturnal: false,
     description: "The silence is unsettling, yet strangely soothing. No one else remains. All have been delivered. O King of Salvation, carry me too into eternal stillness. -The ancient text cuts off here.",
   },
   {
@@ -7463,6 +7743,7 @@ export const pals: IPal[] = [
       name: "Holy Knight of the Firmament",
       description: "Can be ridden. Can triple jump while mounted. Activate Spear Thrust to have Necromus stay by your side and attack enemies in tandem.",
     },
+    nocturnal: false,
     description: "Once one with Necromus. Its gleaming form is free of all negative emotions. However, a glimmer of hatred can still be seen deep within its eyes.",
   },
   {
@@ -7487,6 +7768,7 @@ export const pals: IPal[] = [
       name: "Dark Knight of the Abyss",
       description: "Can be ridden. Can double jump while mounted. When Twin Spears skill is activated, a Paladius in your party will appear and attack alongside you.",
     },
+    nocturnal: true,
     description: "Once one with Paladius. Its darkened form is the embodiment of negative emotions. However, a glimmer of compassion can still be seen deep within its eyes.",
   },
   {
@@ -7507,6 +7789,7 @@ export const pals: IPal[] = [
       name: "Icy Steed",
       description: "Can be ridden as a flying mount. While mounted, changes the player's attack type to Ice, inflict Freeze (2~6), increases Attack by (10~40)%.",
     },
+    nocturnal: false,
     description: "Guardian deity of Palpagos Island, known as the Winter Caller. In the past, when a calamity struck the land, it soared into the sky and sealed away the threat by casting the island into eternal winter.",
   },
   {
@@ -7527,6 +7810,7 @@ export const pals: IPal[] = [
       name: "Black Steed",
       description: "Can be ridden as a flying mount. While mounted, changes the player's attack type to Dark, inflict Blind (2~6), increases Attack by (10~40)%.",
     },
+    nocturnal: true,
     description: "Guardian deity of Palpagos Island, known as the Night Caller. In the past, when a calamity struck the land, it soared into the sky and sealed away the threat by casting the island into eternal darkness.",
   },
   {
@@ -7547,6 +7831,7 @@ export const pals: IPal[] = [
       name: "Sentinel of the Great Sea",
       description: "While in party, it follows up the player's attacks with Water spear strikes. Can be ridden to travel on water. While mounted, it can leap high into the air over water.",
     },
+    nocturnal: false,
     description: "After the sealing of the calamity, a champion from Feybreak emerged. It stares out to sea, awaiting one it deems worthy. For such encounters are no coincidence—they are fate.",
   },
   {
@@ -7567,6 +7852,7 @@ export const pals: IPal[] = [
       name: "Aerial Missile",
       description: "Can be ridden as a flying mount. Can rapidly fire a missile launcher while mounted.",
     },
+    nocturnal: false,
     description: "Watches over Palpagos Island from high above. When calamity returns to the land, the earth will split open, and the skies will burn. It is destined to strike down the calamity in a flash of total destruction.",
   },
   {
@@ -7583,6 +7869,7 @@ export const pals: IPal[] = [
       name: "Resonant Guardian",
       description: "Can be ridden as a flying mount. Only 1 can be summoned to a base. While at a base, it constantly patrols the skies and bombards intruders from high above.",
     },
+    nocturnal: false,
     description: "The last of its species, keeping its sacred duty close to heart. Even should its long obligation ever be fulfilled, its cries for its mother would only be answered by a solitary echo.",
   },
   {
@@ -7599,6 +7886,7 @@ export const pals: IPal[] = [
       name: "-",
       description: "This Pal's abilities are still being investigated.",
     },
+    nocturnal: false,
     description: "A shadow of its former self, this mysterious Pal descended upon the Palpagos long ago. Bringing ruin and calamity, it was sealed away for millennia until it was ultimately defeated by a certain Pal Tamer",
   },
 ];

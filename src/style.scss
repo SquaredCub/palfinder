@@ -228,6 +228,25 @@ main {
         }
       }
 
+      .sleeplessToggle {
+        // same indigo pill as the card badge, muted until activated
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: $muted;
+        background-color: transparent;
+        border: 1px solid $line;
+        border-radius: $radius-sm;
+        min-width: 2.6rem;
+        &:hover {
+          background-color: $panel-raised;
+        }
+        &.isActive {
+          color: #e6e4ff;
+          background-color: #4c4b9e;
+          border-color: #7a79c9;
+        }
+      }
+
       .typeGrid {
         display: flex;
         flex-wrap: wrap;
@@ -361,6 +380,18 @@ main {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+    .sleepless {
+      // matches the in-game indigo "Sleepless" tag
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #e6e4ff;
+      background-color: #4c4b9e;
+      border: 1px solid #7a79c9;
+      border-radius: $radius-sm;
+      padding: 0.15rem 0.4rem;
     }
     .types {
       display: flex;

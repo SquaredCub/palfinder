@@ -27,6 +27,7 @@ const App = () => {
   // expensive re-render of the pal grid happens at low priority.
   const deferredSearchFilter = useDeferredValue(searchFilter);
   const [typeFilter, setTypeFilter] = useState<TypesEnum[]>([]);
+  const [sleeplessOnly, setSleeplessOnly] = useState<boolean>(false);
 
   const toggleType = (t: TypesEnum) => {
     setTypeFilter((old) =>
@@ -55,6 +56,9 @@ const App = () => {
         }
       }
     }
+    // Retirer les pals qui dorment la nuit si on ne veut que des noctambules
+    if (sleeplessOnly && !p.nocturnal) return false;
+
     // Retirer les pals qui n'ont pas TOUS les éléments sélectionnés
     if (typeFilter.length > 0) {
       if (!typeFilter.every((t) => p.types.includes(t))) return false;
@@ -137,6 +141,8 @@ const App = () => {
             selectedTypes={typeFilter}
             toggleType={toggleType}
             resetTypes={() => setTypeFilter([])}
+            sleeplessOnly={sleeplessOnly}
+            toggleSleepless={() => setSleeplessOnly((old) => !old)}
           />
         </section>
         <section className={`palsSection ${menuOpen ? "collapsed" : "open"}`}>

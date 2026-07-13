@@ -11,6 +11,7 @@ export interface IPal {
   image: string;
   aura: IAura;
   wiki: string;
+  nocturnal: boolean;
 }
 
 interface ISuitability {

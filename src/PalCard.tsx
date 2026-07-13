@@ -20,8 +20,17 @@ const itemImage = (drop: string) =>
     .toLowerCase()}.png`;
 
 const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
-  const { key, name, types, suitability, drops, aura, description, image } =
-    pal;
+  const {
+    key,
+    name,
+    types,
+    suitability,
+    drops,
+    aura,
+    description,
+    image,
+    nocturnal,
+  } = pal;
   const orderedSuitability = [...suitability].sort(
     (a, b) => SUITABILITIES.indexOf(a.type) - SUITABILITIES.indexOf(b.type)
   );
@@ -40,6 +49,11 @@ const PalCard: React.FC<IPalCardProps> = ({ pal }) => {
       <header className="palcard-head">
         <span className="key">No.{key}</span>
         <h3 className="name">{name}</h3>
+        {nocturnal && (
+          <span className="sleepless" title="Works through the night">
+            Sleepless
+          </span>
+        )}
         <div className="types">
           {types.map((t) => (
             <img
