@@ -160,6 +160,9 @@ main {
       position: sticky;
       max-height: calc(100vh - 6.2rem);
       overflow-y: auto;
+      // don't let wheel momentum spill into the page once the panel
+      // reaches the end of its own scroll range
+      overscroll-behavior-y: contain;
       box-sizing: border-box;
       @media screen and (max-width: 700px) {
         width: 100%;
